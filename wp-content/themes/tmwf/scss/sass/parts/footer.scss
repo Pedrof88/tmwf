@@ -10,6 +10,12 @@
         margin-top: 30px;
     }
     &__block {
+        @include respond(phone) {
+            img {
+                margin: auto;
+                display: block;
+            }
+        }
         ul {
             padding-left: 0;
             list-style: none;
@@ -17,6 +23,9 @@
                 position: relative;
                 color: $white;
                 line-height: 2;
+                @include respond(phone) {
+                    text-align: center;
+                }
                 &:first-of-type {
                     font-weight: bold;
                     a {
@@ -49,8 +58,17 @@
     }
 
     .socials {
+        @include respond(phone) {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
         img {
             margin-right: 10px;
+            @include respond(phone) {
+                display: inline;
+            }
         }
     }
 

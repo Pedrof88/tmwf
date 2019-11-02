@@ -8,6 +8,9 @@
 
 .col-custom {
     width: 20%;
+    @include respond (tab-port) {
+        width: 50%;
+    }
 }
 
 .col-3 {

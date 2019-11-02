@@ -7,6 +7,9 @@
 
 .col-custom {
   width: 20%; }
+  @media only screen and (max-width: 56.35em) {
+    .col-custom {
+      width: 50%; } }
 
 .col-3 {
   width: 25%; }
@@ -523,6 +526,10 @@ ul li p:before {
   flex-direction: row; }
   .footer .logo-img {
     margin-top: 30px; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__block img {
+      margin: auto;
+      display: block; } }
   .footer__block ul {
     padding-left: 0;
     list-style: none; }
@@ -530,6 +537,9 @@ ul li p:before {
       position: relative;
       color: #FFF;
       line-height: 2; }
+      @media only screen and (max-width: 37.5em) {
+        .footer__block ul li {
+          text-align: center; } }
       .footer__block ul li:first-of-type {
         font-weight: bold; }
         .footer__block ul li:first-of-type a {
@@ -551,8 +561,21 @@ ul li p:before {
         .footer__block ul li a:hover::before, .footer__block ul li a:active::before {
           visibility: visible;
           width: 100px; }
+  @media only screen and (max-width: 37.5em) {
+    .footer .socials {
+      width: 300px;
+      margin: auto;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
+      justify-content: center; } }
   .footer .socials img {
     margin-right: 10px; }
+    @media only screen and (max-width: 37.5em) {
+      .footer .socials img {
+        display: inline; } }
   .footer .copyright {
     color: #FFF;
     text-align: center;
