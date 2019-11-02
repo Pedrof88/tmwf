@@ -526,6 +526,7 @@ ul li p:before {
     padding-left: 0;
     list-style: none; }
     .footer__block ul li {
+      position: relative;
       color: #FFF;
       line-height: 2; }
       .footer__block ul li:first-of-type {
@@ -535,6 +536,20 @@ ul li p:before {
       .footer__block ul li a {
         color: #FFF;
         line-height: 2; }
+        .footer__block ul li a::before {
+          visibility: hidden;
+          position: absolute;
+          content: "";
+          width: 0%;
+          background-color: #FFF;
+          height: 2px;
+          bottom: 0;
+          -webkit-transition: all .3s;
+          -o-transition: all .3s;
+          transition: all .3s; }
+        .footer__block ul li a:hover::before, .footer__block ul li a:active::before {
+          visibility: visible;
+          width: 100px; }
   .footer .socials img {
     margin-right: 10px; }
   .footer .copyright {

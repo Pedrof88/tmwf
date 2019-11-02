@@ -14,6 +14,7 @@
             padding-left: 0;
             list-style: none;
             li {
+                position: relative;
                 color: $white;
                 line-height: 2;
                 &:first-of-type {
@@ -23,6 +24,23 @@
                     }
                 }
                 a {
+                    
+                    &::before {
+                        visibility: hidden;
+                        position: absolute;
+                        content: "";
+                        width: 0%;
+                        background-color: $white;
+                        height: 2px;
+                        bottom: 0;
+                        transition: all .3s;
+                    }
+                    &:hover,&:active {
+                        &::before {
+                            visibility: visible;
+                            width: 100px;
+                        }
+                    }
                     color: $white;
                     line-height: 2;
                 }
