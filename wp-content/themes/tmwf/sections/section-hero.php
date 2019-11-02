@@ -1,4 +1,4 @@
-<section class="hero-section">
+<section class="hero-section <?php if(get_sub_field( 'content_side' )){echo 'left';}else{echo 'right';}; ?>">
     <?php if ( have_rows( 'group_left' ) ) : ?>
         <?php while ( have_rows( 'group_left' ) ) : the_row(); ?>
             <?php $image = get_sub_field( 'image' ); if ( $image ): ?>
