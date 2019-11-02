@@ -1,20 +1,12 @@
 //COLOURS
-$color-primary: #0a1830;
-$color-secondary: #aad7ca;
-$color-primary-light: #373e53;
-$color-tertiary: #f4f4f4;
+$color-primary: #c6132f;
+$color-secondary: #58595b;
 $white: #FFF;
-$grey: #a4a5a9;
+$black: #000;
+
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
 
 
 
 //FONTS
-$title-font: 'brandon-grotesque',
-sans-serif;
-
-$paragraph-font: 'brandon-grotesque',
-sans-serif;
-
-$paragraph-font-weight: 400;
-
-$paragraph-font-weight-light: 300;
+$font: 'Montserrat', sans-serif;
