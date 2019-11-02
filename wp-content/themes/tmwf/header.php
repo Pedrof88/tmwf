@@ -67,10 +67,11 @@
 			</header>
 			<!-- /header -->
 
-			<script>
-jQuery('#toggle').click(function() {
-   jQuery(this).toggleClass('active');
-   jQuery('#overlay').toggleClass('open');
-  });
+		</div>
 
-				</script>
+		<script>
+			jQuery('#toggle').click(function () {
+				jQuery(this).toggleClass('active');
+				jQuery('#overlay').toggleClass('open');
+			});
+		</script>

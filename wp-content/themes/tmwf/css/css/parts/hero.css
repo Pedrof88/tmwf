@@ -1,0 +1,6 @@
+.hero-section {
+  position: relative; }
+  .hero-section .image-wrap {
+    width: 100vw; }
+    .hero-section .image-wrap img {
+      width: 80%; }

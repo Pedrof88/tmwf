@@ -13,3 +13,24 @@
         color: $white !important;
     }
 }
+
+.arrow-link {
+    position: relative;
+    color: $color-primary;
+    font-weight: bold;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover {
+        &:after {
+            margin-left: 20px;
+        }
+    }
+
+    &:after {
+        content: url('../img/icons/link-arrow.svg');
+        position: absolute;
+        width: 40px;
+        margin-left: 10px;
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+}
