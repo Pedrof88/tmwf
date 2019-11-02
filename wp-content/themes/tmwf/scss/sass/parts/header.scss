@@ -119,6 +119,7 @@
     opacity: 1;
     visibility: visible;
     height: 100%;
+    z-index: 10;
     
     li {
       animation: fadeInRight .5s ease forwards;
