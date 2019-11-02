@@ -72,6 +72,89 @@ function html5blank_nav()
 	);
 }
 
+function aboutus_nav()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'extra-menu',
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
+}
+
+function events_nav()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'events-menu',
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
+}
+
+function get_involved_menu()
+{
+	wp_nav_menu(
+	array(
+		'theme_location'  => 'get-involved',
+		'menu'            => '',
+		'container'       => 'div',
+		'container_class' => 'menu-{menu slug}-container',
+		'container_id'    => '',
+		'menu_class'      => 'menu',
+		'menu_id'         => '',
+		'echo'            => true,
+		'fallback_cb'     => 'wp_page_menu',
+		'before'          => '',
+		'after'           => '',
+		'link_before'     => '',
+		'link_after'      => '',
+		'items_wrap'      => '<ul>%3$s</ul>',
+		'depth'           => 0,
+		'walker'          => ''
+		)
+	);
+}
+
+
+function custom_events_menu() {
+  register_nav_menu('events-menu',__( 'Events menu' ));
+}
+add_action( 'init', 'custom_events_menu' );
+
+function custom_get_involved_menu() {
+    register_nav_menu('get-involved',__( 'Get involved menu' ));
+  }
+  add_action( 'init', 'custom_get_involved_menu' );
+
 // Load HTML5 Blank scripts (header.php)
 function html5blank_header_scripts()
 {
@@ -525,6 +608,12 @@ function html5_shortcode_demo($atts, $content = null)
 function html5_shortcode_demo_2($atts, $content = null) // Demo Heading H2 shortcode, allows for nesting within above element. Fully expandable.
 {
     return '<h2>' . $content . '</h2>';
+}
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
 }
 
 ?>

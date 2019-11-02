@@ -1,18 +1,46 @@
-			<!-- footer -->
-			<footer class="footer" role="contentinfo">
-
-				<!-- copyright -->
-				<p class="copyright">
-					&copy; <?php echo date('Y'); ?> Copyright <?php bloginfo('name'); ?>. <?php _e('Powered by', 'html5blank'); ?>
-					<a href="//wordpress.org" title="WordPress">WordPress</a> &amp; <a href="//html5blank.com" title="HTML5 Blank">HTML5 Blank</a>.
-				</p>
-				<!-- /copyright -->
-
-			</footer>
-			<!-- /footer -->
-
+			
 		</div>
 		<!-- /wrapper -->
+			<!-- footer -->
+			<footer class="footer" role="contentinfo">
+				<div class="wrapper">
+
+				<div class="footer__block col-custom">
+					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="Logo" class="logo-img">
+				</div>
+
+				<div class="footer__block col-custom">
+					<?php aboutus_nav(); ?>
+				</div>
+				<div class="footer__block col-custom">
+					<?php events_nav(); ?>
+				</div>
+				<div class="footer__block col-custom">
+					<?php get_involved_menu();?>
+				</div>
+				<div class="footer__block col-custom">
+					<ul>
+						<li>Contact us</li>
+						<li><a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a></li>
+						<li><a href="tel: <?php the_field('telephone', 'option'); ?>"><?php the_field('telephone', 'option'); ?></a></li>
+					</ul>
+					<div class="socials">
+						<a href="<?php the_field('facebook', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="facebook" class="social-icon"></a>
+						<a href="<?php the_field('twitter', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter" class="social-icon"></a>
+						<a href="<?php the_field('instagram', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt="instagram" class="social-icon"></a>
+					</div>
+				</div>
+				</div>
+
+					<!-- copyright -->
+					<div class="copyright">
+						<p>The Malcolm Whales Foundation is a charity registered in England and Wales (No. 1146719)</p>
+						<p>Copyright © 2019 The Malcom Whales Foundation</p>
+						<p>Website designed by <strong>Elliot Littlefield</strong></p>
+					</div>
+					<!-- /copyright -->
+			</footer>
+			<!-- /footer -->
 
 		<?php wp_footer(); ?>
 

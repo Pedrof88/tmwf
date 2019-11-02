@@ -56,9 +56,9 @@
 						</div>
 							<?php html5blank_nav(); ?>
 							<div class="socials">
-							<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="facebook" class="social-icon"></a>
-							<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter" class="social-icon"></a>
-							<a href="#"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt="instagram" class="social-icon"></a>
+							<a href="<?php the_field('facebook', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/facebook.png" alt="facebook" class="social-icon"></a>
+							<a href="<?php the_field('twitter', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/twitter.png" alt="twitter" class="social-icon"></a>
+							<a href="<?php the_field('instagram', 'option'); ?>"><img src="<?php echo get_template_directory_uri(); ?>/img/instagram.png" alt="instagram" class="social-icon"></a>
 							</div>
 						</nav>
 					</div>
