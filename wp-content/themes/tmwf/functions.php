@@ -88,6 +88,10 @@ function html5blank_header_scripts()
 
         wp_register_script('owlscripts', get_template_directory_uri() . '/js/lib/owl.carousel.min.js', array('jquery'), '1.0.0'); // Owl scripts
         wp_enqueue_script('owlscripts'); // Enqueue it!
+
+        wp_register_script('fontawesome', 'https://kit.fontawesome.com/2071e14eb3.js', array('jquery'), '1.0.0'); // Font awesome
+        wp_enqueue_script('fontawesome'); // Enqueue it!
+
     }
 }
 
