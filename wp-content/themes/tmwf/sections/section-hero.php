@@ -8,16 +8,14 @@
             <?php endif; ?>
         <?php endwhile; ?>
     <?php endif; ?>
-    <?php $buttonText = get_sub_field( 'button_text' ); ?>
-    <?php $buttonURL = get_sub_field( 'button_url' ); ?>
-    <?php if ( have_rows( 'groud_left' ) ) : ?>
-        <?php while ( have_rows( 'groud_left' ) ) : the_row(); ?>
+    <?php if ( have_rows( 'group_right' ) ) : ?>
+        <?php while ( have_rows( 'group_right' ) ) : the_row(); ?>
             <div class="content-wrap">
                 <div class="content-container">
                     <h1><?php the_sub_field( 'title' ); ?></h1>
                     <?php the_sub_field( 'content' ); ?>
-                    <?php if( $buttonURL ): ?>
-                        <a href="<?php echo $buttonURL; ?>" class="arrow-link"><?php echo $buttonText; ?></a>
+                    <?php if( get_sub_field( 'button_url' ) ): ?>
+                        <a href="<?php echo the_sub_field( 'button_url' ); ?>" class="arrow-link"><?php the_sub_field( 'button_text' ); ?></a>
                     <?php endif; ?>
                 </div>
             </div>
