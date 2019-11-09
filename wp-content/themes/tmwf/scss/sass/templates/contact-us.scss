@@ -1,0 +1,80 @@
+.page-template-contact-us {
+    .contact-header {
+        padding-bottom: 10rem;
+        .hero {
+            object-fit: cover;
+            width: 100%;
+            max-height: 600px;
+        }
+    }
+
+    .card {
+        padding: 8rem;
+        background-color: $white;
+        box-shadow: 0 0 10px 4px rgba(0,0,0,0.08);
+        max-width: 750px;
+        margin: -150px auto auto auto;
+        @include respond (tab-port) {
+            margin-top: -75px;
+        }
+        @include respond (phone) {
+            margin-top: 0;
+        }
+        display: block;
+        z-index: 999;
+        position: relative;
+
+        @include respond(tab-port) {
+            padding: 6rem 4rem;
+        }
+
+        h1 {
+            margin: 0;
+            color: $color-primary;
+            font-size: 4rem;
+            font-weight: bold;
+            line-height: 4.2rem;
+            margin-bottom: 1.5rem;
+            text-align: center;
+        }
+
+        p {
+            margin: 2rem 0 0 0;
+            color: $color-secondary;
+            margin-bottom: 1.5rem;
+            line-height: 2.8rem;
+            text-align: center;
+        }
+
+        &__contacts {
+            margin: auto;
+            display: flex;
+            justify-content: center;
+            &__block {
+                margin: 2rem;
+                img {
+                    margin: auto;
+                    display: block;
+                }
+                a {
+                    margin-top: 2rem;
+                    text-align: center;
+                    display: block;
+                }
+            }
+        }
+
+        &__socials {
+                width: 300px;
+                margin: 3rem auto auto auto;
+                display: flex;
+                justify-content: center;
+            img {
+                margin-right: 10px;
+                @include respond(phone) {
+                    display: inline;
+                }
+            }
+        }
+    }
+}

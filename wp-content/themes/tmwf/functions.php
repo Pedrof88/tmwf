@@ -201,6 +201,10 @@ function html5blank_styles()
 
     wp_register_style('owlmin', get_template_directory_uri() . '/css/owl.carousel.min.css', array(), '1.0', 'all');
     wp_enqueue_style('owlmin'); // Enqueue it!
+
+    wp_register_style('owldefault', get_template_directory_uri() . '/css/owl.theme.default.min.css', array(), '1.0', 'all');
+    wp_enqueue_style('owldefault'); // Enqueue it!
+
 }
 
 // Register HTML5 Blank Navigation

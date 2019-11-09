@@ -1,0 +1,59 @@
+.form {
+padding-bottom: 6rem;;
+}
+.wpcf7-form {
+    padding-bottom: 6rem;
+    .submit-button.arrow-link {
+        position: relative;
+        max-width: 300px !important;
+        margin: auto;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .arrow-link {
+        &:after {
+            margin-left: -10px;
+            top:3px;
+        }
+    }
+    .wpcf7-submit{
+        color: $color-primary;
+        font-weight: bold;
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        font-size: 1.6rem;
+        text-align: center;
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+    }
+    .col-6, .col-12 {
+        input, textarea {
+            transition: all .3s;
+            font-size: 1.6rem;
+            padding: 2rem;
+            border: none;
+            border-bottom: 2px solid $light-grey;
+            color: $light-grey;
+            width: 100%;
+            &:active, &:focus {
+                color: $black;
+                border-bottom: 2px solid $color-primary;
+            }
+        }
+        textarea {
+            outline-color: $color-primary;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+        color: $light-grey;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $light-grey;
+      }
+      
+      ::placeholder {
+        color: $light-grey;
+      }
+}

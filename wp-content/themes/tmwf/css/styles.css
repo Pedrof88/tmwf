@@ -250,14 +250,16 @@ ul li {
     -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1); }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
+  color: #c6132f;
+  font-size: 3rem;
+  margin: 0;
+  margin-bottom: 1rem;
   font-family: "Montserrat", sans-serif;
   font-weight: bold; }
+
+h3 {
+  font-size: 1.8rem; }
 
 span.text,
 p,
@@ -749,11 +751,6 @@ ul li p:before {
       .content-section .content-wrapper {
         width: 100%;
         padding: 0; } }
-    .content-section .content-wrapper h1, .content-section .content-wrapper h2, .content-section .content-wrapper h3, .content-section .content-wrapper h4, .content-section .content-wrapper h5, .content-section .content-wrapper h6 {
-      color: #c6132f;
-      font-size: 3rem;
-      margin: 0;
-      margin-bottom: 1rem; }
     .content-section .content-wrapper p {
       margin: 0;
       margin-bottom: 2rem;
@@ -780,3 +777,175 @@ ul li p:before {
 
 .textvideo-section .video-wrapper iframe {
   width: 100%; }
+
+.form {
+  padding-bottom: 6rem; }
+
+.wpcf7-form {
+  padding-bottom: 6rem; }
+  .wpcf7-form .submit-button.arrow-link {
+    position: relative;
+    max-width: 300px !important;
+    margin: auto;
+    text-align: center;
+    margin-top: 3rem; }
+  .wpcf7-form .arrow-link:after {
+    margin-left: -10px;
+    top: 3px; }
+  .wpcf7-form .wpcf7-submit {
+    color: #c6132f;
+    font-weight: bold;
+    -webkit-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    -o-transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    font-size: 1.6rem;
+    text-align: center;
+    -webkit-appearance: none;
+    background: none;
+    border: none; }
+  .wpcf7-form .col-6 input, .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 input, .wpcf7-form .col-12 textarea {
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s;
+    font-size: 1.6rem;
+    padding: 2rem;
+    border: none;
+    border-bottom: 2px solid #ddd;
+    color: #ddd;
+    width: 100%; }
+    .wpcf7-form .col-6 input:active, .wpcf7-form .col-6 input:focus, .wpcf7-form .col-6 textarea:active, .wpcf7-form .col-6 textarea:focus, .wpcf7-form .col-12 input:active, .wpcf7-form .col-12 input:focus, .wpcf7-form .col-12 textarea:active, .wpcf7-form .col-12 textarea:focus {
+      color: #000;
+      border-bottom: 2px solid #c6132f; }
+  .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 textarea {
+    outline-color: #c6132f; }
+  .wpcf7-form ::-webkit-input-placeholder {
+    /* Edge */
+    color: #ddd; }
+  .wpcf7-form :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #ddd; }
+  .wpcf7-form ::-ms-input-placeholder {
+    color: #ddd; }
+  .wpcf7-form ::placeholder {
+    color: #ddd; }
+
+.slider {
+  position: relative;
+  padding-top: 6rem;
+  padding-bottom: 6rem; }
+  .slider__top-content p {
+    max-width: 400px; }
+  .slider__container {
+    margin-top: 2rem;
+    max-width: 1560px;
+    float: right;
+    margin-right: -200px;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+    transition: all .3s; }
+    @media only screen and (max-width: 37.5em) {
+      .slider__container {
+        width: 85% !important;
+        margin-right: 0; } }
+    .slider__container .last {
+      opacity: 0.2; }
+      @media only screen and (max-width: 37.5em) {
+        .slider__container .last {
+          opacity: 1; } }
+    .slider__container .owl-prev {
+      position: absolute;
+      left: -100px;
+      top: 40%;
+      outline: none; }
+      @media only screen and (max-width: 37.5em) {
+        .slider__container .owl-prev {
+          left: -65px; } }
+      .slider__container .owl-prev:hover {
+        background: transparent !important; }
+        .slider__container .owl-prev:hover img {
+          opacity: 0.7; }
+    .slider__container .owl-next {
+      position: absolute;
+      right: 0;
+      top: 40%;
+      outline: none; }
+      .slider__container .owl-next:hover {
+        background: transparent !important; }
+        .slider__container .owl-next:hover img {
+          opacity: 0.7; }
+    .slider__container h3 {
+      margin-top: 1.5rem;
+      color: #414042; }
+
+.page-template-contact-us .contact-header {
+  padding-bottom: 10rem; }
+  .page-template-contact-us .contact-header .hero {
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+    max-height: 600px; }
+
+.page-template-contact-us .card {
+  padding: 8rem;
+  background-color: #FFF;
+  -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
+  max-width: 750px;
+  margin: -150px auto auto auto;
+  display: block;
+  z-index: 999;
+  position: relative; }
+  @media only screen and (max-width: 56.35em) {
+    .page-template-contact-us .card {
+      margin-top: -75px; } }
+  @media only screen and (max-width: 37.5em) {
+    .page-template-contact-us .card {
+      margin-top: 0; } }
+  @media only screen and (max-width: 56.35em) {
+    .page-template-contact-us .card {
+      padding: 6rem 4rem; } }
+  .page-template-contact-us .card h1 {
+    margin: 0;
+    color: #c6132f;
+    font-size: 4rem;
+    font-weight: bold;
+    line-height: 4.2rem;
+    margin-bottom: 1.5rem;
+    text-align: center; }
+  .page-template-contact-us .card p {
+    margin: 2rem 0 0 0;
+    color: #58595b;
+    margin-bottom: 1.5rem;
+    line-height: 2.8rem;
+    text-align: center; }
+  .page-template-contact-us .card__contacts {
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-template-contact-us .card__contacts__block {
+      margin: 2rem; }
+      .page-template-contact-us .card__contacts__block img {
+        margin: auto;
+        display: block; }
+      .page-template-contact-us .card__contacts__block a {
+        margin-top: 2rem;
+        text-align: center;
+        display: block; }
+  .page-template-contact-us .card__socials {
+    width: 300px;
+    margin: 3rem auto auto auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .page-template-contact-us .card__socials img {
+      margin-right: 10px; }
+      @media only screen and (max-width: 37.5em) {
+        .page-template-contact-us .card__socials img {
+          display: inline; } }

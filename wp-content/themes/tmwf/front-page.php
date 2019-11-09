@@ -11,7 +11,7 @@
 
                 <?php elseif ( get_row_layout() == 'content_text_w_image' ) : ?>
 
-                    <?php get_template_part('sections/section', 'textimage'); ?>
+                    <?php get_template_part('sections/section', 'textimage'); ?>6666666
 
                 <?php elseif ( get_row_layout() == 'content_text_only' ) : ?>
                     <?php the_sub_field( 'content_full' ); ?>
@@ -26,7 +26,9 @@
                     
                     <?php get_template_part('sections/section', 'textvideo'); ?>
 
-                <?php endif; ?>
+                    <?php elseif ( get_row_layout() == 'Custom Slider' ) : ?>
+                    <?php get_template_part('sections/section', 'slider'); ?>
+                    <?php endif; ?>
 
             <?php endwhile; ?>
         <?php else: ?>
