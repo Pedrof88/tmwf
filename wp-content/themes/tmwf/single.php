@@ -1,67 +1,54 @@
 <?php get_header(); ?>
 
 	<main role="main">
-	<!-- section -->
-	<section>
 
-	<?php if (have_posts()): while (have_posts()) : the_post(); ?>
-
-		<!-- article -->
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-
-			<!-- post thumbnail -->
-			<?php if ( has_post_thumbnail()) : // Check if Thumbnail exists ?>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-					<?php the_post_thumbnail(); // Fullsize image for the single post ?>
-				</a>
+	<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+		<!-- section -->
+		<section class="hero-section <?php if(get_sub_field( 'content_side_news' )){echo 'left';}else{echo 'right';}; ?>">
+			<?php if ( have_rows( 'group_left_news' ) ) : ?>
+				<?php while ( have_rows( 'group_left_news' ) ) : the_row(); ?>
+					<?php $image = get_sub_field( 'image' ); if ( $image ): ?>
+					<div class="image-wrap">
+						<img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />
+					</div>
+					<?php endif; ?>
+				<?php endwhile; ?>
 			<?php endif; ?>
-			<!-- /post thumbnail -->
+			<?php if ( have_rows( 'group_right_news' ) ) : ?>
+				<?php while ( have_rows( 'group_right_news' ) ) : the_row(); ?>
+					<div class="content-wrap">
+						<div class="content-container">
+							<?php if( get_sub_field( 'title' ) ): ?>
+								<h1><?php the_sub_field( 'title' ); ?></h1>
+							<?php else: ?>
+								<h1><?php the_title(); ?></h1>
+							<?php endif; ?>
+							<?php the_sub_field( 'content' ); ?>
+						</div>
+					</div>
+				<?php endwhile; ?>
+			<?php endif; ?>
+		</section>
 
-			<!-- post title -->
-			<h1>
-				<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>"><?php the_title(); ?></a>
-			</h1>
-			<!-- /post title -->
+		<section class="news-article content-section">
 
-			<!-- post details -->
-			<span class="date"><?php the_time('F j, Y'); ?> <?php the_time('g:i a'); ?></span>
-			<span class="author"><?php _e( 'Published by', 'html5blank' ); ?> <?php the_author_posts_link(); ?></span>
-			<span class="comments"><?php if (comments_open( get_the_ID() ) ) comments_popup_link( __( 'Leave your thoughts', 'html5blank' ), __( '1 Comment', 'html5blank' ), __( '% Comments', 'html5blank' )); ?></span>
-			<!-- /post details -->
+			<div class="container-large">
 
-			<?php the_content(); // Dynamic Content ?>
+				<div class="col-12">
+				<?php if (have_posts()): while (have_posts()) : the_post(); ?>
 
-			<?php the_tags( __( 'Tags: ', 'html5blank' ), ', ', '<br>'); // Separated by commas with a line break at the end ?>
+					<div class="content-wrapper">
+						<?php the_content(); // Dynamic Content ?>
+					</div>
 
-			<p><?php _e( 'Categorised in: ', 'html5blank' ); the_category(', '); // Separated by commas ?></p>
+				<?php endwhile; endif; ?>
+				</div>
 
-			<p><?php _e( 'This post was written by ', 'html5blank' ); the_author(); ?></p>
+			</div>
 
-			<?php edit_post_link(); // Always handy to have Edit Post Links available ?>
-
-			<?php comments_template(); ?>
-
-		</article>
-		<!-- /article -->
-
-	<?php endwhile; ?>
-
-	<?php else: ?>
-
-		<!-- article -->
-		<article>
-
-			<h1><?php _e( 'Sorry, nothing to display.', 'html5blank' ); ?></h1>
-
-		</article>
-		<!-- /article -->
-
-	<?php endif; ?>
-
-	</section>
-	<!-- /section -->
+		</section>
+		<!-- /section -->
+	</article>
 	</main>
-
-<?php get_sidebar(); ?>
 
 <?php get_footer(); ?>

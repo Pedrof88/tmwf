@@ -16,7 +16,9 @@
                 <?php while ( have_rows( 'group_right' ) ) : the_row(); ?>
                     <div class="content-wrapper">
                         <?php the_sub_field( 'content' ); ?>
-                        <a href="<?php echo the_sub_field( 'button_url' ); ?>" class="arrow-link"><?php the_sub_field( 'button_text' ); ?></a>
+                        <?php if(get_sub_field( 'button_url' )): ?>
+                            <a href="<?php echo the_sub_field( 'button_url' ); ?>" class="arrow-link"><?php the_sub_field( 'button_text' ); ?></a>
+                        <?php endif; ?>
                     </div>
                 <?php endwhile; ?>
             <?php endif; ?>

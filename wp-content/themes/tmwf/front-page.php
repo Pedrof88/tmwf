@@ -11,24 +11,29 @@
 
                 <?php elseif ( get_row_layout() == 'content_text_w_image' ) : ?>
 
-                    <?php get_template_part('sections/section', 'textimage'); ?>6666666
+                    <?php get_template_part('sections/section', 'textimage'); ?>
 
                 <?php elseif ( get_row_layout() == 'content_text_only' ) : ?>
-                    <?php the_sub_field( 'content_full' ); ?>
-                    <?php the_sub_field( 'content_left' ); ?>
-                    <?php the_sub_field( 'content_right' ); ?>
-                    <?php if ( get_sub_field( 'column_option' ) == 1 ) { 
-                    // echo 'true'; 
-                    } else { 
-                    // echo 'false'; 
-                    } ?>
+                    
+                    <?php get_template_part('sections/section', 'textonly'); ?>
+
                 <?php elseif ( get_row_layout() == 'content_text_w_video' ) : ?>
                     
                     <?php get_template_part('sections/section', 'textvideo'); ?>
 
-                    <?php elseif ( get_row_layout() == 'Custom Slider' ) : ?>
+                <?php elseif ( get_row_layout() == 'Custom Slider' ) : ?>
+
                     <?php get_template_part('sections/section', 'slider'); ?>
-                    <?php endif; ?>
+
+                <?php elseif ( get_row_layout() == 'content_text_w_data' ) : ?>
+
+                    <?php get_template_part('sections/section', 'textdata'); ?>
+
+                <?php elseif ( get_row_layout() == 'partners_logos' ) : ?>
+
+                    <?php get_template_part('sections/section', 'logos'); ?>
+
+                <?php endif; ?>
 
             <?php endwhile; ?>
         <?php else: ?>
