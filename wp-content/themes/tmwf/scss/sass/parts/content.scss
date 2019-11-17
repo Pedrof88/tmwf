@@ -27,6 +27,8 @@
 
     .container-large {
         display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
 
         .col-5 {
             @include respond(tab-port) {
@@ -40,6 +42,12 @@
             @include respond(tab-port) {
                 width: 100%;
             }
+        }
+    }
+
+    article {
+        .content-wrapper {
+            width: 100%;
         }
     }
 
@@ -60,9 +68,30 @@
             margin: 0;
             margin-bottom: 2rem;
             color: $color-secondary;
+            //font-weight: 500;
 
             &:last-child {
                 margin-bottom: 0;
+            }
+        }
+
+        blockquote {
+            width: 80%;
+            margin: 0 auto;
+            margin-top: 2rem;
+            margin-bottom: 4rem;
+
+            p {
+                color: $color-primary;
+                font-size: 2.2rem;
+                font-weight: 600;
+            }
+
+            span {
+                margin-top: 1.5rem;
+                display: block;
+                font-size: 1.4rem;
+                font-weight: 500;
             }
         }
     }
@@ -91,10 +120,107 @@
 }
 
 .textvideo-section {
+    &.left {
+        .container-large {
+            flex-direction: row;
+        }
+    }
+
+    &.right {
+        .container-large {
+            flex-direction: row-reverse;
+        }
+    }
+
     .video-wrapper {
 
         iframe {
             width: 100%;
         }
     }
+}
+
+.textonly-section {
+
+    .col-6 {
+        &:nth-child(odd) {
+            padding-left: 0;
+
+            @include respond(tab-port) {
+                padding-left: 15px;
+            }
+        }
+
+        &:nth-child(even) {
+            padding-right: 0;
+
+            @include respond(tab-port) {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .col-12 {
+        padding: 0;
+        
+        @include respond(tab-port) {
+            padding: 0 15px;
+        }
+    }
+
+    .content-wrapper {
+        justify-content: flex-start;
+        padding: 0;
+    }
+}
+
+.textdata-section {
+    .col-6 {
+        &:nth-child(odd) {
+            padding-left: 0;
+
+            @include respond(tab-port) {
+                padding-left: 15px;
+            }
+        }
+
+        &:nth-child(even) {
+            padding-right: 0;
+
+            @include respond(tab-port) {
+                padding-right: 15px;
+            }
+        }
+    }
+
+    .content-wrapper {
+        padding: 0;
+    }
+
+    .data-item {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .number {
+            font-family: $font;
+            font-size: 5.4rem;
+            font-weight: 800;
+            color: $color-primary;
+            margin-right: 2rem;
+        }
+
+        .description {
+            width: 90px;
+            font-family: $font;
+            color: $footer-color;
+            font-size: 1.5rem;
+            font-weight: 500;
+            line-height: 1.6rem;
+        }
+    }
+}
+
+.news-article {
+    padding: 8rem 0 6rem 0;
 }

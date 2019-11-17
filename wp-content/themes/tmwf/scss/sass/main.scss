@@ -9,14 +9,16 @@
 //PARTS
 @import 'parts/header';
 @import 'parts/footer';
-@import 'parts/hero';
 @import 'parts/content';
 @import 'parts/forms';
 
 //SECTIONS
 
 @import 'sections/slider';
+@import 'sections/logos';
+@import 'sections/hero';
 
 //SECTIONS
 
 @import 'templates/contact-us';
+@import 'templates/gallery';
