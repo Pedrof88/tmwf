@@ -934,7 +934,12 @@ ul li p:before {
       .page-template-contact-us .card__contacts__block a {
         margin-top: 2rem;
         text-align: center;
-        display: block; }
+        display: block;
+        -webkit-transition: all .3s;
+        -o-transition: all .3s;
+        transition: all .3s; }
+        .page-template-contact-us .card__contacts__block a:hover {
+          color: #c6132f; }
   .page-template-contact-us .card__socials {
     width: 300px;
     margin: 3rem auto auto auto;
