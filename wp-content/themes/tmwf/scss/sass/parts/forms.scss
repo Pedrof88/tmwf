@@ -57,3 +57,61 @@ padding-bottom: 6rem;;
         color: $light-grey;
       }
 }
+
+.application-form {
+
+span.wpcf7-list-item {
+    display: block;
+    font-size: 1.6rem;
+    font-family: $font;
+    margin-bottom: 2rem;
+    width: 50%;
+    @include respond(phone) {
+        width: 100%;
+    }
+    margin-left: 0;
+
+    input[type="checkbox"] {
+        float: right;
+        border: 1px solid $color-primary;
+        height: 15px;
+        width: 15px;
+        -webkit-appearance: none;
+        &:active, &:focus {
+            background: $color-primary;
+        }
+    }
+}
+
+.other {
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.margin {
+    margin-top: 3rem;
+}
+
+.left {
+    padding-left: 0;
+    @include respond(phone) {
+        padding-right: 0;
+    }
+}
+
+.right {
+    padding-right: 0;
+    @include respond(phone) {
+        padding-left: 0;
+    }
+}
+
+.submit-margin {
+    margin-bottom: 6rem;
+    input {
+        font-size: 2rem;
+    }
+}
+
+    margin-top: 3rem;
+}

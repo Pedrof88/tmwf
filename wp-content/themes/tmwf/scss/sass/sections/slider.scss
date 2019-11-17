@@ -1,4 +1,23 @@
 .slider {
+
+    &.slider-full-width {
+            .slider__container {
+                margin-right: 0;
+
+                .last {
+                    opacity: 1;
+                }
+
+                .item {
+                    &.odd {
+                        margin-top: 6rem;
+                        @include respond(phone) {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+    }
     position: relative;
     padding-top: 6rem;
     padding-bottom: 6rem;

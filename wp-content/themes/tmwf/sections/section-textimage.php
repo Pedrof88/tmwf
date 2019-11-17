@@ -9,6 +9,9 @@
         <div class="col-6">
             <div class="content-wrapper">
                 <?php the_sub_field( 'content' ); ?>
+                <?php if(get_sub_field( 'button_url' )): ?>
+                    <a href="<?php echo the_sub_field( 'button_url' ); ?>" class="arrow-link"><?php the_sub_field( 'button_text' ); ?></a>
+                <?php endif; ?>
             </div>
         </div>
     </div>
