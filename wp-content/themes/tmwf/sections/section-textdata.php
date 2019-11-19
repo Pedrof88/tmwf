@@ -1,7 +1,8 @@
 <section class="textdata-section content-section">
     <div class="container-large">
         
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-5">
         <?php if ( have_rows( 'gourp_left' ) ) : ?>
             <?php while ( have_rows( 'gourp_left' ) ) : the_row(); ?>
             <div class="content-wrapper">
@@ -14,7 +15,8 @@
         <?php endif; ?>
         </div>
 
-        <div class="col-6">
+        <div class="col-1"></div>
+        <div class="col-5">
         <?php if ( have_rows( 'group_right' ) ) : ?>
             <?php while ( have_rows( 'group_right' ) ) : the_row(); ?>
             <div class="data-wrapper">

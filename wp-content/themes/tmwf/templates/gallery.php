@@ -34,11 +34,12 @@
                 <?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
 
                 <div class="gallery-container" id="<?php echo strtolower(str_replace(' ', '-', get_sub_field( 'gallery_name' ))); ?>">
-                <?php $gallery_images_images = get_sub_field( 'gallery_images' ); ?>
+				<div class="col-3 grid-sizer"></div>
+				<?php $gallery_images_images = get_sub_field( 'gallery_images' ); ?>
                 <?php $count = 0; if ( $gallery_images_images ) :  ?>
                     <?php foreach ( $gallery_images_images as $gallery_images_image ): ?>
                     <div class="col-3 image-wrapper">
-                        <a href="#image-<?php echo $count; ?>" class="gallery-link">
+                        <a href="<?php echo $gallery_images_image['sizes']['large']; ?>" class="gallery-link" data-lightbox="<?php echo strtolower(str_replace(' ', '-', get_sub_field( 'gallery_name' ))); ?>">
                             <img src="<?php echo $gallery_images_image['sizes']['large']; ?>" alt="<?php echo $gallery_images_image['alt']; ?>" />
                         </a>
                     </div>
@@ -50,6 +51,24 @@
             <?php endif; ?>
             </div>
         </section>
+
+		<script>
+			(function($){
+				$('.gallery-section').imagesLoaded( function(){
+					$('.gallery-container').isotope({
+						itemSelector: '.image-wrapper',
+						percentPosition: true,
+						masonry: {
+							columnWidth: '.grid-sizer'
+						}
+					});
+				});
+
+				lightbox.option({
+					'disableScrolling': true
+				});
+			})(jQuery);
+		</script>
 
 	</main>
 

@@ -6,7 +6,7 @@
 		
 		// DOM ready, take it away
 
-		$('.owl-carousel')
+		$('.slider__container')
 		.on('changed.owl.carousel initialized.owl.carousel', function(event) {
 			$(event.target)
 			  .find('.owl-item').removeClass('last')
@@ -31,7 +31,15 @@
 					items:4
 				}
 			}
-		})
+		});
+
+		$('.event-slider').owlCarousel({
+            loop:true,
+			nav:true,
+			items: 1,
+			dots: false,
+			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left-white.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right-white.png'>"],
+        });
 		
 	});
 	

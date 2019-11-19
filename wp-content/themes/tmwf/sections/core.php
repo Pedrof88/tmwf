@@ -52,7 +52,11 @@
                 <?php elseif ( get_row_layout() == 'sign_up' ) : ?>
 
                     <?php get_template_part('sections/section', 'sign-up'); ?>
-                    
+                
+                <?php elseif ( get_row_layout() == 'events_slider' ) : ?>
+                
+                    <?php get_template_part('sections/section', 'events'); ?>
+
                 <?php endif; ?>
 
             <?php endwhile; ?>
