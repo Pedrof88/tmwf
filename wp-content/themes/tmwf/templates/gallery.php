@@ -26,31 +26,29 @@
 					</div>
 				<?php endwhile; ?>
 			<?php endif; ?>
-        </section>
+		</section>
+		
+		<section class="filter-section">
+			<div class="container-large">
+				<select name="filter-gallery" id="filter-gallery">
+					<?php $filter=0; if ( have_rows( 'gallery' ) ) : ?>
+						<?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
+						
+							<option value="<?php echo $filter; ?>"><?php the_sub_field( 'gallery_name' ) ?></option>
+
+						<?php $filter++; endwhile; ?>
+					<?php endif; ?>
+				</select>
+			</div>
+		</section>
         
         <section class="gallery-section">
             <div class="container-large">
-            <?php if ( have_rows( 'gallery' ) ) : ?>
-                <?php while ( have_rows( 'gallery' ) ) : the_row(); ?>
+			
+				<?php $gallery = 0; include(locate_template('sections/section-gallery.php')); ?>
 
-                <div class="gallery-container" id="<?php echo strtolower(str_replace(' ', '-', get_sub_field( 'gallery_name' ))); ?>">
-				<div class="col-3 grid-sizer"></div>
-				<?php $gallery_images_images = get_sub_field( 'gallery_images' ); ?>
-                <?php $count = 0; if ( $gallery_images_images ) :  ?>
-                    <?php foreach ( $gallery_images_images as $gallery_images_image ): ?>
-                    <div class="col-3 image-wrapper">
-                        <a href="<?php echo $gallery_images_image['sizes']['large']; ?>" class="gallery-link" data-lightbox="<?php echo strtolower(str_replace(' ', '-', get_sub_field( 'gallery_name' ))); ?>">
-                            <img src="<?php echo $gallery_images_image['sizes']['large']; ?>" alt="<?php echo $gallery_images_image['alt']; ?>" />
-                        </a>
-                    </div>
-                    <?php $count++; endforeach; ?>
-                <?php endif; ?>
-                </div>
-
-                <?php endwhile; ?>
-            <?php endif; ?>
             </div>
-        </section>
+		</section>
 
 		<script>
 			(function($){
@@ -60,6 +58,29 @@
 						percentPosition: true,
 						masonry: {
 							columnWidth: '.grid-sizer'
+						}
+					});
+				});
+
+				$('#filter-gallery').on('change', function(){
+					$.ajax({
+						type: "POST",
+						url: "<?php echo admin_url('admin-ajax.php'); ?>",
+						data: {
+							action: "request_gallery",
+							gallery: $(this).val(),
+						},
+						success: function (data) {
+							$('.gallery-section .container-large').html('');
+							//console.log("Hooray, it worked! - "+data);
+							$('.gallery-section .container-large').append(data);
+							$('.gallery-container').isotope();
+						},
+						error: function (jqXHR, textStatus, errorThrown) {
+							console.error("The following error occured: " + textStatus, errorThrown);
+						},
+						complete: function () {
+							//console.log('maxpage: '+maxpage+', currentpage: '+currentPage)
 						}
 					});
 				});

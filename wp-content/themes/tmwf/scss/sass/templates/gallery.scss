@@ -1,8 +1,12 @@
 .gallery-section {
-    padding: 10rem 0;
+    padding: 0rem 0rem 10rem 0rem;
 
     .gallery-container {
         word-spacing: -4px;
+
+        .grid-sizer {
+            padding: 0;
+        }
 
         .image-wrapper {
             display: inline-block;
@@ -33,6 +37,25 @@
                     object-position: center;
                 }
             }
+        }
+    }
+}
+
+.filter-section {
+    padding: 5rem;
+    
+    .container-large {
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+
+        select {
+            border: none;
+            font-size: 1.6rem;
+            margin: 0;
+            color: #58595b;
+            line-height: 2.8rem;
+            outline: none;
         }
     }
 }
