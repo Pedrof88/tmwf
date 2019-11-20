@@ -447,6 +447,8 @@ add_action('init', 'register_html5_menu'); // Add HTML5 Blank Menu
 add_action('init', 'create_post_type_trustees'); // Add trustees custom post type
 add_action('init', 'create_post_type_patrons'); // Add patrons custom post type
 add_action('init', 'create_post_type_partners'); // Add partners custom post type
+add_action('init', 'create_post_type_leaderboards'); // Add leaderboards custom post type
+add_action('init', 'create_post_type_annualreviews'); // Add leaderboards custom post type
 add_action('widgets_init', 'my_remove_recent_comments_style'); // Remove inline Recent Comment Styles from wp_head()
 add_action('init', 'html5wp_pagination'); // Add our HTML5 Pagination
 
@@ -601,6 +603,76 @@ function create_post_type_partners()
             'editor',
             'excerpt',
             'thumbnail'
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+// Trustees custom post type
+function create_post_type_leaderboards()
+{
+    register_taxonomy_for_object_type('category', 'leaderboards'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'leaderboards');
+    register_post_type('leaderboards', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Leaderboards', 'leaderboards'), // Rename these to suit
+            'singular_name' => __('Leaderboards', 'leaderboards'),
+            'add_new' => __('Add New', 'leaderboards'),
+            'add_new_item' => __('Add New leaderboards', 'leaderboards'),
+            'edit' => __('Edit', 'leaderboards'),
+            'edit_item' => __('Edit Leaderboards', 'leaderboards'),
+            'new_item' => __('New Leaderboards', 'leaderboards'),
+            'view' => __('View Leaderboards', 'leaderboards'),
+            'view_item' => __('View Leaderboards', 'leaderboards'),
+            'search_items' => __('Search Leaderboards', 'leaderboards'),
+            'not_found' => __('No Leaderboards found', 'leaderboards'),
+            'not_found_in_trash' => __('No Leaderboards found in Trash', 'leaderboards')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
+        ), // Go to Dashboard Custom HTML5 Blank post for supports
+        'can_export' => true, // Allows export in Tools > Export
+        'taxonomies' => array(
+            'post_tag',
+            'category'
+        ) // Add Category and Post Tags support
+    ));
+}
+
+// Annual Reviews custom post type
+function create_post_type_annualreviews()
+{
+    register_taxonomy_for_object_type('category', 'annualreviews'); // Register Taxonomies for Category
+    register_taxonomy_for_object_type('post_tag', 'annualreviews');
+    register_post_type('annualreviews', // Register Custom Post Type
+        array(
+        'labels' => array(
+            'name' => __('Annual Reviews', 'annualreviews'), // Rename these to suit
+            'singular_name' => __('Annual Reviews', 'annualreviews'),
+            'add_new' => __('Add New', 'leaderboards'),
+            'add_new_item' => __('Add New leaderboards', 'annualreviews'),
+            'edit' => __('Edit', 'leaderboards'),
+            'edit_item' => __('Edit Annual Reviews', 'annualreviews'),
+            'new_item' => __('New Annual Reviews', 'annualreviews'),
+            'view' => __('View Annual Reviews', 'annualreviews'),
+            'view_item' => __('View Annual Reviews', 'annualreviews'),
+            'search_items' => __('Search Annual Reviews', 'annualreviews'),
+            'not_found' => __('No Annual Reviews found', 'annualreviews'),
+            'not_found_in_trash' => __('No Annual Reviews found in Trash', 'annualreviews')
+        ),
+        'public' => true,
+        'hierarchical' => true, // Allows your posts to behave like Hierarchy Pages
+        'has_archive' => true,
+        'supports' => array(
+            'title',
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
