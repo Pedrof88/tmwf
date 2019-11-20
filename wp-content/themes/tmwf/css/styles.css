@@ -531,6 +531,9 @@ ul li p:before {
     opacity: 1;
     left: 0; } }
 
+.logo-img {
+  max-width: 85px; }
+
 .footer {
   padding: 3rem 0;
   float: left;
@@ -815,21 +818,23 @@ ul li p:before {
     -webkit-appearance: none;
     background: none;
     border: none; }
-  .wpcf7-form .col-6 input, .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 input, .wpcf7-form .col-12 textarea {
-    -webkit-transition: all .3s;
-    -o-transition: all .3s;
-    transition: all .3s;
-    font-size: 1.6rem;
-    padding: 2rem;
-    border: none;
-    border-bottom: 2px solid #ddd;
-    color: #ddd;
-    width: 100%; }
-    .wpcf7-form .col-6 input:active, .wpcf7-form .col-6 input:focus, .wpcf7-form .col-6 textarea:active, .wpcf7-form .col-6 textarea:focus, .wpcf7-form .col-12 input:active, .wpcf7-form .col-12 input:focus, .wpcf7-form .col-12 textarea:active, .wpcf7-form .col-12 textarea:focus {
-      color: #000;
-      border-bottom: 2px solid #c6132f; }
-  .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 textarea {
-    outline-color: #c6132f; }
+  .wpcf7-form .col-6, .wpcf7-form .col-12, .wpcf7-form .col-2, .wpcf7-form .col-4, .wpcf7-form .col-5, .wpcf7-form .col-8 {
+    padding: 15px !important; }
+    .wpcf7-form .col-6 input, .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 input, .wpcf7-form .col-12 textarea, .wpcf7-form .col-2 input, .wpcf7-form .col-2 textarea, .wpcf7-form .col-4 input, .wpcf7-form .col-4 textarea, .wpcf7-form .col-5 input, .wpcf7-form .col-5 textarea, .wpcf7-form .col-8 input, .wpcf7-form .col-8 textarea {
+      -webkit-transition: all .3s;
+      -o-transition: all .3s;
+      transition: all .3s;
+      font-size: 1.6rem;
+      padding: 2rem;
+      border: none;
+      border-bottom: 2px solid #ddd;
+      color: #ddd;
+      width: 100%; }
+      .wpcf7-form .col-6 input:active, .wpcf7-form .col-6 input:focus, .wpcf7-form .col-6 textarea:active, .wpcf7-form .col-6 textarea:focus, .wpcf7-form .col-12 input:active, .wpcf7-form .col-12 input:focus, .wpcf7-form .col-12 textarea:active, .wpcf7-form .col-12 textarea:focus, .wpcf7-form .col-2 input:active, .wpcf7-form .col-2 input:focus, .wpcf7-form .col-2 textarea:active, .wpcf7-form .col-2 textarea:focus, .wpcf7-form .col-4 input:active, .wpcf7-form .col-4 input:focus, .wpcf7-form .col-4 textarea:active, .wpcf7-form .col-4 textarea:focus, .wpcf7-form .col-5 input:active, .wpcf7-form .col-5 input:focus, .wpcf7-form .col-5 textarea:active, .wpcf7-form .col-5 textarea:focus, .wpcf7-form .col-8 input:active, .wpcf7-form .col-8 input:focus, .wpcf7-form .col-8 textarea:active, .wpcf7-form .col-8 textarea:focus {
+        color: #000;
+        border-bottom: 2px solid #c6132f; }
+    .wpcf7-form .col-6 textarea, .wpcf7-form .col-12 textarea, .wpcf7-form .col-2 textarea, .wpcf7-form .col-4 textarea, .wpcf7-form .col-5 textarea, .wpcf7-form .col-8 textarea {
+      outline-color: #c6132f; }
   .wpcf7-form ::-webkit-input-placeholder {
     /* Edge */
     color: #ddd; }
@@ -880,6 +885,15 @@ ul li p:before {
     margin-bottom: 6rem; }
     .application-form .submit-margin input {
       font-size: 2rem; }
+
+.how-to-book p {
+  margin-bottom: 30px; }
+
+.how-to-book span.wpcf7-list-item {
+  float: left; }
+
+.how-to-book input[type="checkbox"] {
+  margin-right: 20px; }
 
 .slider {
   position: relative;
@@ -1079,11 +1093,13 @@ ul li p:before {
     margin: auto;
     display: block; }
 
-.sign-up h2 {
-  margin-bottom: 0; }
-
-.sign-up h2, .sign-up input {
-  text-align: center; }
+.sign-up {
+  margin-top: 3rem;
+  margin-bottom: 3rem; }
+  .sign-up h2 {
+    margin-bottom: 0; }
+  .sign-up h2, .sign-up input {
+    text-align: center; }
 
 .events-section {
   position: relative;
@@ -1179,6 +1195,34 @@ ul li p:before {
       @media only screen and (max-width: 56.35em) {
         .events-section .event-slider .owl-prev {
           left: -2rem; } }
+
+.leaderboard {
+  margin-top: 6rem;
+  margin-bottom: 10rem; }
+  .leaderboard__title {
+    color: #c6132f;
+    font-weight: bold; }
+    .leaderboard__title p {
+      font-size: 1.9rem; }
+  .leaderboard .grey-border {
+    border-bottom: 1px solid #ddd; }
+  .leaderboard .col-3 {
+    padding: 0; }
+
+.desktop-view {
+  display: block; }
+  @media only screen and (max-width: 56.35em) {
+    .desktop-view {
+      display: none; } }
+
+.mobile-view {
+  display: none; }
+  @media only screen and (max-width: 56.35em) {
+    .mobile-view {
+      display: block; } }
+  @media only screen and (max-width: 56.35em) {
+    .mobile-view .col-3 {
+      width: 50%; } }
 
 .page-template-contact-us .contact-header {
   padding-bottom: 10rem; }

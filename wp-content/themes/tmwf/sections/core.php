@@ -57,6 +57,14 @@
                 
                     <?php get_template_part('sections/section', 'events'); ?>
 
+                <?php elseif ( get_row_layout() == 'leaderboard_table' ) : ?>
+            
+                    <?php get_template_part('sections/section', 'leaderboard-table'); ?>
+
+                <?php elseif ( get_row_layout() == 'how_to_book' ) : ?>
+            
+                    <?php get_template_part('sections/section', 'how-to-book'); ?>
+
                 <?php endif; ?>
 
             <?php endwhile; ?>

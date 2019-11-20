@@ -26,7 +26,8 @@ padding-bottom: 6rem;;
         background: none;
         border: none;
     }
-    .col-6, .col-12 {
+    .col-6, .col-12, .col-2, .col-4, .col-5, .col-8 {
+        padding: 15px !important;
         input, textarea {
             transition: all .3s;
             font-size: 1.6rem;
@@ -114,4 +115,16 @@ span.wpcf7-list-item {
 }
 
     margin-top: 3rem;
+}
+
+.how-to-book {
+    p {
+        margin-bottom: 30px;
+    }
+    span.wpcf7-list-item {
+        float: left;
+    }
+    input[type="checkbox"] { 
+        margin-right: 20px;
+    }
 }
