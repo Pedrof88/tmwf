@@ -26,7 +26,8 @@
 	<body <?php body_class(); ?>>
 
 		<!-- wrapper -->
-		<div class="wrapper">
+		<div class="shadow">
+			<div class="wrapper">
 
 			<!-- header -->
 			<header class="header clear" role="banner">
@@ -66,7 +67,7 @@
 
 			</header>
 			<!-- /header -->
-
+			</div>
 		</div>
 
 		<script>

@@ -1,5 +1,15 @@
 .slider {
-
+    @media (min-width: 1300px) {
+    margin-right: 16rem;
+    }
+    .item {
+        @media (min-width: 1300px) {
+        img {
+            max-height: 225px;
+            object-fit: cover;
+        }
+    }
+    }
     &.slider-full-width {
             .slider__container {
                 margin-right: 0;
@@ -31,6 +41,9 @@
         max-width: 1560px;
         float: right;
         margin-right: -200px;
+        @media (min-width: 1300px) {
+            margin-right: -300px;
+        }
         transition: all .3s;
         @include respond(phone) {
             width: 85% !important;
@@ -62,7 +75,9 @@
 
         .owl-next {
             position: absolute;
-            right: 0;
+            @media (min-width: 1300px) {
+                right: 140px;
+            }
             top: 40%;
             &:hover {
                 background: transparent !important;
