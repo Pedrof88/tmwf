@@ -1,14 +1,9 @@
 .slider {
-    @media (min-width: 1300px) {
-    margin-right: 16rem;
-    }
     .item {
-        @media (min-width: 1300px) {
         img {
             max-height: 225px;
             object-fit: cover;
         }
-    }
     }
     &.slider-full-width {
             .slider__container {
@@ -41,8 +36,8 @@
         max-width: 1560px;
         float: right;
         margin-right: -200px;
-        @media (min-width: 1300px) {
-            margin-right: -300px;
+        @media (min-width: 1500px) {
+            margin-right: -350px;
         }
         transition: all .3s;
         @include respond(phone) {
@@ -75,9 +70,7 @@
 
         .owl-next {
             position: absolute;
-            @media (min-width: 1300px) {
-                right: 140px;
-            }
+            right: 0;
             top: 40%;
             &:hover {
                 background: transparent !important;
@@ -86,6 +79,33 @@
                 }
             }
             outline: none;
+            @media (max-width: 1750px) {
+                right: 17%;
+            }
+            @media (max-width: 1670px) {
+                right: 20%;
+            }
+            @media (max-width: 1585px) {
+                right: 21%;
+            }
+            @media (max-width: 1549px) {
+                right: 18%;
+            }
+            @media (max-width: 1090px) {
+                right: 20%;
+            }
+            @media (max-width: 975px) {
+                right: 22%;
+            }
+            @media (max-width: 890px) {
+                right: 27%;
+            }
+            @media (max-width: 790px) {
+                right: 29%;
+            }
+            @media (max-width: 678px) {
+                display: none !important;
+            }
         }
 
         h3 {

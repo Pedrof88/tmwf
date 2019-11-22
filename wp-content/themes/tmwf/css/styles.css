@@ -906,14 +906,10 @@ h2 {
   position: relative;
   padding-top: 6rem;
   padding-bottom: 6rem; }
-  @media (min-width: 1300px) {
-    .slider {
-      margin-right: 16rem; } }
-  @media (min-width: 1300px) {
-    .slider .item img {
-      max-height: 225px;
-      -o-object-fit: cover;
-      object-fit: cover; } }
+  .slider .item img {
+    max-height: 225px;
+    -o-object-fit: cover;
+    object-fit: cover; }
   .slider.slider-full-width .slider__container {
     margin-right: 0; }
     .slider.slider-full-width .slider__container .last {
@@ -933,9 +929,9 @@ h2 {
     -webkit-transition: all .3s;
     -o-transition: all .3s;
     transition: all .3s; }
-    @media (min-width: 1300px) {
+    @media (min-width: 1500px) {
       .slider__container {
-        margin-right: -300px; } }
+        margin-right: -350px; } }
     @media only screen and (max-width: 37.5em) {
       .slider__container {
         width: 85% !important;
@@ -959,15 +955,40 @@ h2 {
           opacity: 0.7; }
     .slider__container .owl-next {
       position: absolute;
+      right: 0;
       top: 40%;
       outline: none; }
-      @media (min-width: 1300px) {
-        .slider__container .owl-next {
-          right: 140px; } }
       .slider__container .owl-next:hover {
         background: transparent !important; }
         .slider__container .owl-next:hover img {
           opacity: 0.7; }
+      @media (max-width: 1750px) {
+        .slider__container .owl-next {
+          right: 17%; } }
+      @media (max-width: 1670px) {
+        .slider__container .owl-next {
+          right: 20%; } }
+      @media (max-width: 1585px) {
+        .slider__container .owl-next {
+          right: 21%; } }
+      @media (max-width: 1549px) {
+        .slider__container .owl-next {
+          right: 18%; } }
+      @media (max-width: 1090px) {
+        .slider__container .owl-next {
+          right: 20%; } }
+      @media (max-width: 975px) {
+        .slider__container .owl-next {
+          right: 22%; } }
+      @media (max-width: 890px) {
+        .slider__container .owl-next {
+          right: 27%; } }
+      @media (max-width: 790px) {
+        .slider__container .owl-next {
+          right: 29%; } }
+      @media (max-width: 678px) {
+        .slider__container .owl-next {
+          display: none !important; } }
     .slider__container h3 {
       margin-top: 1.5rem;
       color: #414042; }
