@@ -434,6 +434,96 @@ function html5blankcomments($comment, $args, $depth)
     <?php endif; ?>
     <?php }
 
+    // ACF first request
+function acf_loadmore( $field, $ppp, $current, $template ) {
+
+	if( $field && $ppp ){
+
+		// get array with all reapeter items
+		$queryField = get_sub_field($field);
+		// count items
+		$count = count($queryField);
+		// count pages
+		$pages = ceil($count / $ppp);
+		// limit array by calculate ppp with current page
+		$last = $ppp * ($current + 1 );
+		// start array depending on the current page
+		$start = $last - $ppp;
+
+		if ( $count >= $ppp ) {
+
+			echo '<script>var maxpage = '.$pages.'</script>';
+
+			$fieldArray = array_slice($queryField, $start, $last);
+
+			if( $fieldArray ) : foreach( $fieldArray as $item ) :
+		
+				include(locate_template('sections/'.$template.'.php'));
+
+			endforeach; endif;
+
+		}
+
+	}
+
+}
+
+// ACF Repeater Load More
+add_action('wp_ajax_request_loadmore', 'request_loadmore');
+add_action('wp_ajax_nopriv_request_loadmore', 'request_loadmore');
+function request_loadmore(){
+
+	$field = $_POST['field'];
+	$ppp = $_POST['postcount'];
+	$current = $_POST['currentpage'];
+	$template = $_POST['template'];
+	$pageid = $_POST['pageid'];
+	
+	// get array with all reapeter items
+	$queryField = get_field($field, $pageid);
+	// count items
+	$count = count($queryField);
+	// count pages
+	$pages = $count / $ppp;
+	// limit array by calculate ppp with current page
+	$last = $ppp * ($current + 1 );
+	// start array depending on the current page
+	$start = $last - $ppp;
+
+	if ( $count > $ppp ) {
+
+		$fieldArray = array_slice($queryField, $start, $last);
+
+		if( $fieldArray ) : foreach( $fieldArray as $item ) :
+	
+			include(locate_template('sections/'.$template.'.php'));
+
+		endforeach; endif;
+
+	}
+
+	if ( ($current + 1) == $pages ){
+		//remove button
+	}
+
+	die();
+
+}
+
+// ACF selection
+add_action('wp_ajax_request_gallery', 'request_gallery');
+add_action('wp_ajax_nopriv_request_gallery', 'request_gallery');
+function request_gallery(){
+
+    $gallery = $_POST['gallery'];
+    $ajax = 1;
+    
+    include(locate_template('sections/section-gallery.php'));
+    
+    die();
+
+}
+
 /*------------------------------------*\
 	Actions + Filters + ShortCodes
 \*------------------------------------*/

@@ -65,6 +65,10 @@
             
                     <?php get_template_part('sections/section', 'how-to-book'); ?>
 
+                <?php elseif ( get_row_layout() == 'one_slide_-_full_slider' ) : ?>
+
+                    
+
                 <?php endif; ?>
 
             <?php endwhile; ?>
