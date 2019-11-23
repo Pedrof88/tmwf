@@ -26,6 +26,14 @@
     position: relative;
     padding-top: 6rem;
     padding-bottom: 6rem;
+    padding-right: 5%;
+    padding-left: 5%;
+    
+    @include respond(tab-port) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
     &__top-content {
         p {
             max-width: 400px;

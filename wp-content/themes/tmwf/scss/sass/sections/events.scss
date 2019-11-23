@@ -1,14 +1,20 @@
 .events-section {
     position: relative;
     margin-top: 6rem;
+    padding-left: 5%;
+    padding-right: 5%;
 
     @include respond(tab-port) {
         background-color: $color-primary;
+        padding-left: 15px;
+        padding-right: 15px;
     }
     
     .container-large {
         display: flex;
         align-items: flex-end;
+        background: rgb(198,19,47);
+        background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
 
         @include respond(tab-port) {
             display: block;
@@ -21,8 +27,9 @@
         bottom: 0;
         right: 0;
         width: 85%;
-        height: 80%;
-        background-color: $color-primary;
+        height: 100%;
+        background: rgb(198,19,47);
+        background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
         z-index: -1;
 
         @include respond(tab-port) {
@@ -41,7 +48,7 @@
 
         h2 {
             color: $white;
-            font-size: 2rem;
+            font-size: 2rem !important;
             margin: 0;
         }
 
@@ -66,9 +73,21 @@
         width: 100%;
         padding-bottom: 3rem;
 
+        .owl-item {
+            height: 100%;
+        }
+
+        .owl-stage {
+            align-items: flex-end;
+            display: flex;
+        }
+
         .item {
             padding: 0 4rem;
             height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
 
             @include respond(tab-port) {
                 padding: 0;
@@ -81,11 +100,14 @@
                 }
             }
     
+            .image-container {
+                height: 100%;
+            }
 
             img {
                 position: relative;
-                width: auto;
-                height: 100%;
+                width: 100%;
+                height: 100% !important;
                 object-fit: cover;
                 object-position: center;
 
@@ -101,7 +123,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            right: 0;
+            right: 8.5%;
             outline: none;
 
             @include respond(tab-port) {
@@ -113,7 +135,7 @@
             position: absolute;
             top: 0;
             bottom: 0;
-            left: 0;
+            right: 50%;
             outline: none;
 
             @include respond(tab-port) {

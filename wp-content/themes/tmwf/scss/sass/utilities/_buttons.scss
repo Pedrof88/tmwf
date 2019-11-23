@@ -30,3 +30,24 @@
         transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
     }
 }
+
+.arrow-link-white  {
+    position: relative;
+    color: $color-primary;
+    font-weight: bold;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &:hover {
+        &:after {
+            margin-left: 20px;
+        }
+    }
+
+    &:after {
+        content: url('../img/icons/link-arrow-white.svg');
+        position: absolute;
+        width: 40px;
+        margin-left: 10px;
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+    }
+}
