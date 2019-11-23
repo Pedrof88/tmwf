@@ -9,7 +9,9 @@
             $post_type = get_sub_field( 'post_type' );
             $loop = new WP_Query( array(
                 'post_type' => $post_type,
-                'posts_per_page' => -1
+                'posts_per_page' => -1,
+                'orderby' => 'date',
+                'order'   => 'ASC',
             )
             );
             ?>
@@ -22,6 +24,6 @@
             </div>
 
             <?php endwhile; wp_reset_query(); ?>
-        </div>
+            </div>
     </div>
 </div>
