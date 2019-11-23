@@ -67,7 +67,7 @@
 
                 <?php elseif ( get_row_layout() == 'one_slide_-_full_slider' ) : ?>
 
-                    
+                    <?php get_template_part('sections/section', 'fullslider'); ?>
 
                 <?php endif; ?>
 
