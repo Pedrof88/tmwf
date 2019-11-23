@@ -169,10 +169,15 @@
 
     .video-wrapper {
         position: absolute;
-        left: -10%;
-        width: 110%;
+        left: -25%;
+        width: 125%;
         height: 100%;
         padding-right: 5%;
+
+        @media screen and (max-width: 1440px) {
+            left: -10%;
+            width: 110%;
+        }
 
         .image-overlay {
             width: 100%;

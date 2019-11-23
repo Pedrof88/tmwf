@@ -26,8 +26,8 @@
     position: relative;
     padding-top: 6rem;
     padding-bottom: 6rem;
-    padding-right: 5%;
-    padding-left: 5%;
+    padding-right: 0;
+    padding-left: 0;
     
     @include respond(tab-port) {
         padding-right: 15px;
@@ -120,5 +120,15 @@
             margin-top: 1.5rem;
             color: $footer-color;
         }
+    }
+}
+
+.slider-row {
+    padding-right: 5%;
+    padding-left: 5%;
+    
+    @include respond(tab-port) {
+        padding-right: 15px;
+        padding-left: 15px;
     }
 }

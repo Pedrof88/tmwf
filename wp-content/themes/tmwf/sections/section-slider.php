@@ -1,4 +1,4 @@
-<div class="row">
+<div class="row slider-row">
     <div class="slider container-large">
         <div class="slider__top-content">
             <h2><?php the_sub_field( 'title' ); ?></h2>
