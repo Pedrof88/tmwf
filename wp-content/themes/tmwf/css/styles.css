@@ -766,9 +766,15 @@ h2 {
     position: relative;
     height: 500px;
     padding: 0; }
+    @media only screen and (max-width: 56.35em) {
+      .textvideo-section .col-7 {
+        height: 400px; } }
   .textvideo-section .content-wrapper {
     height: 100%;
     padding-left: 5%; }
+    @media only screen and (max-width: 56.35em) {
+      .textvideo-section .content-wrapper {
+        padding-left: 0; } }
   .textvideo-section .video-wrapper {
     position: absolute;
     left: -25%;
@@ -779,11 +785,19 @@ h2 {
       .textvideo-section .video-wrapper {
         left: -10%;
         width: 110%; } }
+    @media only screen and (max-width: 56.35em) {
+      .textvideo-section .video-wrapper {
+        left: 0;
+        width: 100%;
+        padding-right: 0; } }
     .textvideo-section .video-wrapper .image-overlay {
       width: 100%;
       height: 100%;
       position: absolute;
       padding-right: 4%; }
+      @media only screen and (max-width: 56.35em) {
+        .textvideo-section .video-wrapper .image-overlay {
+          padding-right: 0; } }
       .textvideo-section .video-wrapper .image-overlay a {
         position: absolute;
         top: 0;
@@ -1155,6 +1169,9 @@ h2 {
           height: 350px; } }
   .hero-section.left .content-wrap {
     left: 15vw; }
+    @media only screen and (max-width: 56.35em) {
+      .hero-section.left .content-wrap {
+        left: 0; } }
   .hero-section.right .image-wrap {
     width: 100vw; }
     .hero-section.right .image-wrap img {
@@ -1170,6 +1187,9 @@ h2 {
           height: 350px; } }
   .hero-section.right .content-wrap {
     right: 15vw; }
+    @media only screen and (max-width: 56.35em) {
+      .hero-section.right .content-wrap {
+        right: 0; } }
   .hero-section .content-wrap {
     position: absolute;
     top: 0;
@@ -1246,7 +1266,6 @@ h2 {
   padding-right: 5%; }
   @media only screen and (max-width: 56.35em) {
     .events-section {
-      background-color: #c6132f;
       padding-left: 15px;
       padding-right: 15px; } }
   .events-section .container-large {
@@ -1261,8 +1280,19 @@ h2 {
     background: -webkit-linear-gradient(bottom, #c6132f 80%, white 80%);
     background: -o-linear-gradient(bottom, #c6132f 80%, white 80%);
     background: linear-gradient(0deg, #c6132f 80%, white 80%); }
+    @media only screen and (max-width: 75em) {
+      .events-section .container-large {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #c6132f), color-stop(90%, white));
+        background: -webkit-linear-gradient(bottom, #c6132f 90%, white 90%);
+        background: -o-linear-gradient(bottom, #c6132f 90%, white 90%);
+        background: linear-gradient(0deg, #c6132f 90%, white 90%); } }
     @media only screen and (max-width: 56.35em) {
       .events-section .container-large {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #c6132f), color-stop(80%, white));
+        background: -webkit-linear-gradient(bottom, #c6132f 80%, white 80%);
+        background: -o-linear-gradient(bottom, #c6132f 80%, white 80%);
+        background: linear-gradient(0deg, #c6132f 80%, white 80%);
+        width: 100%;
         display: block; } }
   .events-section:after {
     content: "";
@@ -1277,12 +1307,28 @@ h2 {
     background: -o-linear-gradient(bottom, #c6132f 80%, white 80%);
     background: linear-gradient(0deg, #c6132f 80%, white 80%);
     z-index: -1; }
+    @media only screen and (max-width: 75em) {
+      .events-section:after {
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(90%, #c6132f), color-stop(90%, white));
+        background: -webkit-linear-gradient(bottom, #c6132f 90%, white 90%);
+        background: -o-linear-gradient(bottom, #c6132f 90%, white 90%);
+        background: linear-gradient(0deg, #c6132f 90%, white 90%); } }
     @media only screen and (max-width: 56.35em) {
       .events-section:after {
-        display: none; } }
+        background: -webkit-gradient(linear, left bottom, left top, color-stop(80%, #c6132f), color-stop(80%, white));
+        background: -webkit-linear-gradient(bottom, #c6132f 80%, white 80%);
+        background: -o-linear-gradient(bottom, #c6132f 80%, white 80%);
+        background: linear-gradient(0deg, #c6132f 80%, white 80%);
+        width: 100%; } }
   .events-section .event-container {
     width: 90%;
     padding-bottom: 7rem; }
+    @media only screen and (max-width: 89.37em) {
+      .events-section .event-container {
+        padding-bottom: 4rem; } }
+    @media only screen and (max-width: 75em) {
+      .events-section .event-container {
+        padding-bottom: 0rem; } }
     @media only screen and (max-width: 56.35em) {
       .events-section .event-container {
         width: 100%;
@@ -1324,13 +1370,21 @@ h2 {
       -ms-flex-align: end;
       align-items: flex-end; }
       @media only screen and (max-width: 56.35em) {
+        .events-section .event-slider .item .col-1, .events-section .event-slider .item .col-5 {
+          width: 100%; } }
+      @media only screen and (max-width: 56.35em) {
         .events-section .event-slider .item {
-          padding: 0; }
-          .events-section .event-slider .item:after {
-            position: relative;
-            content: "";
-            padding-top: 100%;
-            display: block; } }
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          padding: 0;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+          -webkit-box-align: start;
+          -ms-flex-align: start;
+          align-items: flex-start; } }
       .events-section .event-slider .item .image-container {
         height: 100%; }
       .events-section .event-slider .item img {
@@ -1343,9 +1397,7 @@ h2 {
         object-position: center; }
         @media only screen and (max-width: 56.35em) {
           .events-section .event-slider .item img {
-            width: 100%;
-            height: auto;
-            position: absolute; } }
+            max-height: 550px; } }
     .events-section .event-slider .owl-next {
       position: absolute;
       top: 0;
@@ -1402,6 +1454,9 @@ h2 {
   padding: 6rem 0;
   -webkit-box-sizing: content-box;
   box-sizing: content-box; }
+  @media only screen and (max-width: 37.5em) {
+    .fullslider-section {
+      height: 450px; } }
   .fullslider-section .container-large {
     width: 100%;
     height: 100%;
@@ -1427,6 +1482,9 @@ h2 {
         object-position: center;
         -o-object-fit: cover;
         object-fit: cover; }
+        @media only screen and (max-width: 37.5em) {
+          .fullslider-section .fullslider-slider .item img {
+            height: 450px; } }
   .fullslider-section .owl-prev {
     position: absolute;
     top: 0;

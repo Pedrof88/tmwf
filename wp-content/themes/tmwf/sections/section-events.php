@@ -4,8 +4,8 @@
         <?php if ( have_rows( 'event' ) ) : ?>
             <?php while ( have_rows( 'event' ) ) : the_row(); ?>
             <div class="item">
-                <div class="col-2"></div>
-                <div class="col-4">
+                <div class="col-1"></div>
+                <div class="col-5">
                     <div class="event-container">
                         <h2>Our Events</h2>
                         <h3> <?php the_sub_field( 'event_name' ); ?></h3>

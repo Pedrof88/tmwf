@@ -22,6 +22,10 @@
         
         .content-wrap {
             left: 15vw;
+
+            @include respond(tab-port) {
+                left: 0;
+            }
         }
     }
 
@@ -44,6 +48,10 @@
 
         .content-wrap {
             right: 15vw;
+
+            @include respond(tab-port) {
+                right: 0;
+            }
         }
     }
 

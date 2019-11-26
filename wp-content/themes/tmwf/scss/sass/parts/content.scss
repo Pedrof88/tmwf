@@ -160,11 +160,19 @@
         position: relative;
         height: 500px;
         padding: 0;
+
+        @include respond(tab-port) {
+            height: 400px;
+        }
     }
 
     .content-wrapper {
         height: 100%;
         padding-left: 5%;
+
+        @include respond(tab-port) {
+            padding-left: 0;
+        }
     }
 
     .video-wrapper {
@@ -179,11 +187,21 @@
             width: 110%;
         }
 
+        @include respond(tab-port) {
+            left: 0;
+            width: 100%;
+            padding-right: 0;
+        }
+
         .image-overlay {
             width: 100%;
             height: 100%;
             position: absolute;
             padding-right: 4%;
+
+            @include respond(tab-port) {
+                padding-right: 0;
+            }
             
             a {
                 position: absolute;
