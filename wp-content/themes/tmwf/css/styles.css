@@ -1,4 +1,8 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap");
+@font-face {
+  font-family: "Proxima";
+  src: url("../fonts/ttf/ProximaNova-Regular.ttf"); }
+
 .col-1 {
   width: 8.33%; }
 
@@ -270,8 +274,9 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   margin: 0;
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold; }
+  font-family: "Proxima", sans-serif;
+  font-weight: bold;
+  line-height: 1.2; }
 
 h3 {
   font-size: 1.8rem; }
@@ -282,7 +287,7 @@ a,
 ul,
 li {
   font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Proxima", sans-serif;
   line-height: 1.6; }
 
 ul li {
@@ -560,6 +565,7 @@ h2 {
   box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08); }
 
 .footer {
+  margin-top: 6rem;
   padding: 3rem 0;
   float: left;
   width: 100%;
@@ -881,14 +887,14 @@ h2 {
   -ms-flex-align: center;
   align-items: center; }
   .textdata-section .data-item .number {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     font-size: 5.4rem;
     font-weight: 800;
     color: #c6132f;
     margin-right: 2rem; }
   .textdata-section .data-item .description {
     width: 90px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     color: #414042;
     font-size: 1.5rem;
     font-weight: 500;
@@ -899,6 +905,17 @@ h2 {
 
 .form {
   padding-bottom: 6rem; }
+  .form .container-large {
+    padding-left: 6rem;
+    padding-right: 6rem; }
+    @media only screen and (max-width: 56.35em) {
+      .form .container-large {
+        padding-left: 3rem;
+        padding-right: 3rem; } }
+    @media only screen and (max-width: 37.5em) {
+      .form .container-large {
+        padding-left: 15px;
+        padding-right: 15px; } }
 
 .wpcf7-form {
   padding-bottom: 6rem; }
@@ -955,7 +972,7 @@ h2 {
   .application-form span.wpcf7-list-item {
     display: block;
     font-size: 1.6rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     margin-bottom: 2rem;
     width: 50%;
     margin-left: 0; }
@@ -1023,7 +1040,10 @@ h2 {
       padding-right: 15px;
       padding-left: 15px; } }
   .slider__top-content p {
-    max-width: 400px; }
+    max-width: 400px;
+    margin-top: 0; }
+  .slider__top-content h2 {
+    margin-bottom: 0; }
   .slider__container {
     margin-top: 2rem;
     max-width: 1560px;
@@ -1247,7 +1267,7 @@ h2 {
       margin-bottom: 8rem; } }
   .full-width-button a {
     text-align: center;
-    font-size: 2.2rem;
+    font-size: 3.5rem;
     margin: auto;
     display: block; }
 

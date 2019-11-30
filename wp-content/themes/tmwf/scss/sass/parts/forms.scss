@@ -1,5 +1,18 @@
 .form {
-padding-bottom: 6rem;;
+padding-bottom: 6rem;
+.container-large {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    @include respond(tab-port) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include respond(phone) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
 }
 .wpcf7-form {
     padding-bottom: 6rem;

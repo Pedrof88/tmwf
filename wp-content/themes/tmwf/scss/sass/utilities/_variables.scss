@@ -10,6 +10,10 @@ $light-grey: #ddd;
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,500,700&display=swap');
 
 
+@font-face {
+    font-family: "Proxima";
+    src: url("../fonts/ttf/ProximaNova-Regular.ttf");
+    }
 
 //FONTS
-$font: 'Montserrat', sans-serif;
+$font: 'Proxima', sans-serif;
