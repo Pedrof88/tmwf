@@ -325,3 +325,42 @@
 .news-article {
     padding: 8rem 0 6rem 0;
 }
+
+.modal {
+    opacity: 0;
+    visibility: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,.8);
+    z-index: 99999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    &__container {
+        width: 90%;
+        height: 90%;
+
+        @include respond(tab-port) {
+            height: 300px;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+
+            @include respond(tab-port) {
+                height: 300px;
+            }
+        }
+    }
+}
