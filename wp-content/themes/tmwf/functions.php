@@ -434,7 +434,8 @@ function html5blankcomments($comment, $args, $depth)
     <?php endif; ?>
     <?php }
 
-    // ACF first request
+
+// ACF first request
 function acf_loadmore( $field, $ppp, $current, $template ) {
 
 	if( $field && $ppp ){
@@ -462,7 +463,17 @@ function acf_loadmore( $field, $ppp, $current, $template ) {
 
 			endforeach; endif;
 
-		}
+		}else {
+            echo '<script>var maxpage = '.$pages.'</script>';
+
+			$fieldArray = array_slice($queryField, $start, $last);
+
+			if( $fieldArray ) : foreach( $fieldArray as $item ) :
+		
+				include(locate_template('sections/'.$template.'.php'));
+
+			endforeach; endif;
+        }
 
 	}
 
