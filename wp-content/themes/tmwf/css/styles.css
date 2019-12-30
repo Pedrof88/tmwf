@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   margin: 0;
   margin-bottom: 1rem;
-  font-family: "Proxima", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   line-height: 1.2; }
 
@@ -287,7 +287,7 @@ a,
 ul,
 li {
   font-size: 1.6rem;
-  font-family: "Proxima", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6; }
 
 ul li {
@@ -887,14 +887,14 @@ h2 {
   -ms-flex-align: center;
   align-items: center; }
   .textdata-section .data-item .number {
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 5.4rem;
     font-weight: 800;
     color: #c6132f;
     margin-right: 2rem; }
   .textdata-section .data-item .description {
     width: 90px;
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #414042;
     font-size: 1.5rem;
     font-weight: 500;
@@ -906,8 +906,8 @@ h2 {
 .form {
   padding-bottom: 6rem; }
   .form .container-large {
-    padding-left: 6rem;
-    padding-right: 6rem; }
+    padding-left: 10rem;
+    padding-right: 10rem; }
     @media only screen and (max-width: 56.35em) {
       .form .container-large {
         padding-left: 3rem;
@@ -972,7 +972,7 @@ h2 {
   .application-form span.wpcf7-list-item {
     display: block;
     font-size: 1.6rem;
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 2rem;
     width: 50%;
     margin-left: 0; }
@@ -1123,6 +1123,13 @@ h2 {
     .slider-row {
       padding-right: 15px;
       padding-left: 15px; } }
+
+.slider-full-width h3 {
+  color: #c6132f; }
+
+.slider-full-width .slider__top-content p {
+  max-width: 100%;
+  margin-top: 2rem; }
 
 .logos-section {
   width: 100%;

@@ -615,8 +615,8 @@ function create_post_type_trustees()
         'supports' => array(
             'title',
             'editor',
+            'thumbnail',
             'excerpt',
-            'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(
