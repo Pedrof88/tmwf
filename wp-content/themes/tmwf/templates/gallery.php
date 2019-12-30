@@ -45,7 +45,7 @@
         <section class="gallery-section">
             <div class="container-large">
 			
-				<?php $gallery = 0; include(locate_template('sections/section-gallery.php')); ?>
+				<?php $ajax=0; $gallery = 0; include(locate_template('sections/section-gallery.php')); ?>
 
             </div>
 		</section>
