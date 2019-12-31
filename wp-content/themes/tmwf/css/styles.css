@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   margin: 0;
   margin-bottom: 1rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Proxima", sans-serif;
   font-weight: bold;
   line-height: 1.2; }
 
@@ -287,7 +287,7 @@ a,
 ul,
 li {
   font-size: 1.6rem;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Proxima", sans-serif;
   line-height: 1.6; }
 
 ul li {
@@ -677,20 +677,19 @@ h2 {
     -ms-flex-direction: row;
     flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    padding: 0 5%; }
+    flex-wrap: wrap; }
     @media only screen and (max-width: 56.35em) {
       .content-section .container-large .col-6 {
         width: 100%; } }
-    .content-section .container-large .col-5 {
+    .content-section .container-large .col-6 {
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex; }
-      .content-section .container-large .col-5 .content-wrapper {
+      .content-section .container-large .col-6 .content-wrapper {
         padding-left: 0;
         padding-right: 0; }
       @media only screen and (max-width: 56.35em) {
-        .content-section .container-large .col-5 {
+        .content-section .container-large .col-6 {
           width: 100%; } }
   .content-section article .content-wrapper {
     width: 100%; }
@@ -887,14 +886,14 @@ h2 {
   -ms-flex-align: center;
   align-items: center; }
   .textdata-section .data-item .number {
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     font-size: 5.4rem;
     font-weight: 800;
     color: #c6132f;
     margin-right: 2rem; }
   .textdata-section .data-item .description {
     width: 90px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     color: #414042;
     font-size: 1.5rem;
     font-weight: 500;
@@ -944,8 +943,8 @@ h2 {
 .form {
   padding-bottom: 6rem; }
   .form .container-large {
-    padding-left: 10rem;
-    padding-right: 10rem; }
+    padding-left: 6rem;
+    padding-right: 6rem; }
     @media only screen and (max-width: 56.35em) {
       .form .container-large {
         padding-left: 3rem;
@@ -1010,7 +1009,7 @@ h2 {
   .application-form span.wpcf7-list-item {
     display: block;
     font-size: 1.6rem;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Proxima", sans-serif;
     margin-bottom: 2rem;
     width: 50%;
     margin-left: 0; }
@@ -1162,13 +1161,6 @@ h2 {
       padding-right: 15px;
       padding-left: 15px; } }
 
-.slider-full-width h3 {
-  color: #c6132f; }
-
-.slider-full-width .slider__top-content p {
-  max-width: 100%;
-  margin-top: 2rem; }
-
 .logos-section {
   width: 100%;
   display: -webkit-box;
@@ -1313,6 +1305,19 @@ h2 {
   .full-width-button a {
     text-align: center;
     font-size: 3.5rem;
+    margin: auto;
+    display: block; }
+
+.full-width-button-small {
+  margin-top: 6rem;
+  margin-bottom: 0rem; }
+  @media only screen and (max-width: 37.5em) {
+    .full-width-button-small {
+      margin-bottom: 0rem; } }
+  .full-width-button-small a {
+    width: 100%;
+    text-align: center;
+    font-size: 2rem;
     margin: auto;
     display: block; }
 
@@ -1721,3 +1726,46 @@ h2 {
   position: relative !important;
   left: -20px !important;
   opacity: .9 !important; }
+
+.news-section {
+  padding: 10rem 0rem 10rem 0rem; }
+  .news-section .news-container .grid-sizer {
+    padding: 0; }
+  .news-section .news-container .image-wrapper {
+    display: inline-block; }
+    .news-section .news-container .image-wrapper img {
+      width: 100%;
+      height: 350px;
+      -o-object-fit: cover;
+      object-fit: cover;
+      -o-object-position: center;
+      object-position: center; }
+    .news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5) {
+      margin-top: 6rem; }
+      @media only screen and (max-width: 56.35em) {
+        .news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5) {
+          margin-top: 0; } }
+    .news-section .news-container .image-wrapper .content-wrapper {
+      margin-top: 2rem;
+      margin-bottom: 2rem; }
+    .news-section .news-container .image-wrapper a {
+      display: block;
+      position: relative; }
+
+.filter-section {
+  padding: 5rem; }
+  .filter-section .container-large {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end; }
+    .filter-section .container-large select {
+      border: none;
+      font-size: 1.6rem;
+      margin: 0;
+      color: #58595b;
+      line-height: 2.8rem;
+      outline: none; }
