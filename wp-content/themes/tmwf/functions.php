@@ -763,6 +763,7 @@ function create_post_type_annualreviews()
         'has_archive' => true,
         'supports' => array(
             'title',
+            'thumbnail'
         ), // Go to Dashboard Custom HTML5 Blank post for supports
         'can_export' => true, // Allows export in Tools > Export
         'taxonomies' => array(

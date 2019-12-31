@@ -19,7 +19,7 @@
 			autoplay:true,
 			autoplayTimeout:10000,
 			autoplayHoverPause:true,
-			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
+			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
 			responsive:{
 				0:{
 					items:1
@@ -38,7 +38,7 @@
 			nav:true,
 			items: 1,
 			dots: false,
-			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left-white.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right-white.png'>"],
+			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left-white.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right-white.png'>"],
 		});
 		
 		$('.fullslider-slider').owlCarousel({
@@ -46,7 +46,7 @@
 			nav:true,
 			items: 1,
 			dots: false,
-			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
+			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
         });
 		
 	});
