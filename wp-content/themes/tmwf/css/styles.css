@@ -274,7 +274,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 3rem;
   margin: 0;
   margin-bottom: 1rem;
-  font-family: "Proxima", sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: bold;
   line-height: 1.2; }
 
@@ -287,7 +287,7 @@ a,
 ul,
 li {
   font-size: 1.6rem;
-  font-family: "Proxima", sans-serif;
+  font-family: "Montserrat", sans-serif;
   line-height: 1.6; }
 
 ul li {
@@ -352,9 +352,6 @@ h1 {
 
 h2 {
   font-size: 4rem !important; }
-
-.no-margin {
-  margin-bottom: 0; }
 
 .nav {
   display: -webkit-box;
@@ -684,15 +681,16 @@ h2 {
     @media only screen and (max-width: 56.35em) {
       .content-section .container-large .col-6 {
         width: 100%; } }
-    .content-section .container-large .col-6 {
+    .content-section .container-large .col-5 {
       display: -webkit-box;
       display: -ms-flexbox;
-      display: flex; }
-      .content-section .container-large .col-6 .content-wrapper {
+      display: flex;
+      padding: 0; }
+      .content-section .container-large .col-5 .content-wrapper {
         padding-left: 0;
         padding-right: 0; }
       @media only screen and (max-width: 56.35em) {
-        .content-section .container-large .col-6 {
+        .content-section .container-large .col-5 {
           width: 100%; } }
   .content-section article .content-wrapper {
     width: 100%; }
@@ -889,14 +887,14 @@ h2 {
   -ms-flex-align: center;
   align-items: center; }
   .textdata-section .data-item .number {
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     font-size: 5.4rem;
     font-weight: 800;
     color: #c6132f;
     margin-right: 2rem; }
   .textdata-section .data-item .description {
     width: 90px;
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     color: #414042;
     font-size: 1.5rem;
     font-weight: 500;
@@ -943,17 +941,17 @@ h2 {
         .modal__container iframe {
           height: 300px; } }
 
-.contact-us .form {
+.form {
   padding-bottom: 6rem; }
-  .contact-us .form .container-large {
+  .form .container-large {
     padding-left: 6rem;
     padding-right: 6rem; }
     @media only screen and (max-width: 56.35em) {
-      .contact-us .form .container-large {
+      .form .container-large {
         padding-left: 3rem;
         padding-right: 3rem; } }
     @media only screen and (max-width: 37.5em) {
-      .contact-us .form .container-large {
+      .form .container-large {
         padding-left: 15px;
         padding-right: 15px; } }
 
@@ -1012,7 +1010,7 @@ h2 {
   .application-form span.wpcf7-list-item {
     display: block;
     font-size: 1.6rem;
-    font-family: "Proxima", sans-serif;
+    font-family: "Montserrat", sans-serif;
     margin-bottom: 2rem;
     width: 50%;
     margin-left: 0; }
@@ -1279,7 +1277,7 @@ h2 {
         width: 100%;
         padding: 0 3rem; } }
     .hero-section .content-wrap .content-container {
-      padding: 6rem;
+      padding: 4rem;
       background-color: #FFF;
       -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
       box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08); }
@@ -1308,19 +1306,6 @@ h2 {
   .full-width-button a {
     text-align: center;
     font-size: 3.5rem;
-    margin: auto;
-    display: block; }
-
-.full-width-button-small {
-  margin-top: 6rem;
-  margin-bottom: 0rem; }
-  @media only screen and (max-width: 37.5em) {
-    .full-width-button-small {
-      margin-bottom: 0rem; } }
-  .full-width-button-small a {
-    width: 100%;
-    text-align: center;
-    font-size: 2rem;
     margin: auto;
     display: block; }
 

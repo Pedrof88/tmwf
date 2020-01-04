@@ -11,18 +11,3 @@
         display: block;;
     }
 }
-
-.full-width-button-small {
-    margin-top: 6rem;
-    margin-bottom: 0rem;
-    @include respond(phone) {
-        margin-bottom: 0rem;
-    }
-    a {
-        width: 100%;
-        text-align: center;
-        font-size: 2rem;
-        margin: auto;
-        display: block;;
-    }
-}
