@@ -26,7 +26,7 @@ define( 'DB_NAME', 'tmwf' );
 define( 'DB_USER', 'root' );
 
 /** MySQL database password */
-define( 'DB_PASSWORD', 'root' );
+define( 'DB_PASSWORD', 'root123' );
 
 /** MySQL hostname */
 define( 'DB_HOST', 'localhost' );
@@ -77,7 +77,7 @@ $table_prefix = 'wp_';
  *
  * @link https://codex.wordpress.org/Debugging_in_WordPress
  */
-define( 'WP_DEBUG', false );
+define( 'WP_DEBUG', true );
 
 define( 'WPCF7_AUTOP', false );
 
