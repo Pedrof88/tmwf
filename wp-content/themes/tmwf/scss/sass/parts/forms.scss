@@ -1,8 +1,8 @@
 .form {
 padding-bottom: 6rem;
 .container-large {
-    padding-left: 6rem;
-    padding-right: 6rem;
+    padding-left: 12rem;
+    padding-right: 12rem;
     @include respond(tab-port) {
         padding-left: 3rem;
         padding-right: 3rem;
@@ -139,5 +139,11 @@ span.wpcf7-list-item {
     }
     input[type="checkbox"] { 
         margin-right: 20px;
+    }
+}
+
+form {
+    p.margin-top {
+        margin-bottom: 6rem;
     }
 }

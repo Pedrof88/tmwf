@@ -9,5 +9,8 @@
         font-size: 3.5rem;
         margin: auto;
         display: block;;
+        &:after {
+            top: -5px;
+        }
     }
 }
