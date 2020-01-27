@@ -5,7 +5,7 @@
 			<footer class="footer" role="contentinfo">
 				<div class="wrapper">
 
-				<div class="footer__block col-custom">
+				<div class="footer__block col-2">
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="Logo" class="logo-img">
 				</div>
 

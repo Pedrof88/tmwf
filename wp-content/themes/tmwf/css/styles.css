@@ -291,6 +291,9 @@ li {
   font-family: "Montserrat", sans-serif;
   line-height: 1.6; }
 
+p b, p strong {
+  color: #c6132f; }
+
 ul li {
   font-size: 1.6rem !important; }
   ul li span {
