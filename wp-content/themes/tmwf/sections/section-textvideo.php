@@ -5,16 +5,18 @@
             <?php while ( have_rows( 'group_left' ) ) : the_row(); ?>
                 <div class="col-7">
                     <div class="video-wrapper">
+                        <?php $videosrc = get_sub_field( 'video' ); ?>
                         <?php $overlay = get_sub_field( 'overlay' ); ?>
                         <?php if ( $overlay ) { ?>
                         <div class="image-overlay">
-                            <a href="#">
-                            <?php echo file_get_contents(get_template_directory_uri() . '/img/icons/play.svg'); ?>
-                            </a>
+                            <?php if( $videosrc ): ?>
+                                <a href="#">
+                                <?php echo file_get_contents(get_template_directory_uri() . '/img/icons/play.svg'); ?>
+                                </a>
+                            <?php endif; ?>
                             <img src="<?php echo $overlay['url']; ?>" alt="<?php echo $overlay['alt']; ?>" />
                         </div>
                         <?php } ?>
-                        <?php $videosrc = get_sub_field( 'video' ); ?>
                     </div>
                 </div>
             <?php endwhile; ?>
@@ -69,12 +71,15 @@
             <?php while ( have_rows( 'group_left' ) ) : the_row(); ?>
                 <div class="col-7">
                     <div class="video-wrapper">
+                        <?php $videosrc = get_sub_field( 'video' ); ?>
                         <?php $overlay = get_sub_field( 'overlay' ); ?>
                         <?php if ( $overlay ) { ?>
                         <div class="image-overlay">
-                            <a href="#">
-                            <?php echo file_get_contents(get_template_directory_uri() . '/img/icons/play.svg'); ?>
-                            </a>
+                            <?php if( $videosrc ): ?>
+                                <a href="#">
+                                <?php echo file_get_contents(get_template_directory_uri() . '/img/icons/play.svg'); ?>
+                                </a>
+                            <?php endif; ?>
                             <img src="<?php echo $overlay['url']; ?>" alt="<?php echo $overlay['alt']; ?>" />
                         </div>
                         <?php } ?>
@@ -98,6 +103,12 @@
         </div>
     </div>
 </section>
+
+<div class="modal" id="video">
+    <div class="modal__container">
+        <?php echo $videosrc; ?>
+    </div>
+</div>
 
 <script>
 (function($){

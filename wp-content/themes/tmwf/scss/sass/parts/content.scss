@@ -1,6 +1,12 @@
 .content-section {
     padding: 6rem 0 0 0;
 
+    .col-5 {
+        @media screen and (max-width: 1550px) {
+            width: 36%;
+        }
+    }
+
     &.right {
         .container-large {
             flex-direction: row-reverse;
@@ -185,6 +191,11 @@
         @include respond(tab-port) {
             height: 400px;
         }
+        @media (max-width: 901px) {
+            width: 100%;
+            margin-bottom: 3rem;
+        }
+
     }
 
     .content-wrapper {
