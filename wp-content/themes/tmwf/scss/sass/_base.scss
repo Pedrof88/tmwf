@@ -22,6 +22,12 @@ li {
     line-height: 1.6;
 }
 
+p {
+    b, strong {
+        color: $color-primary;
+    }
+}
+
 ul {
     li {
         font-size: 1.6rem !important;

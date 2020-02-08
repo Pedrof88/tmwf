@@ -69,6 +69,10 @@
 
                     <?php get_template_part('sections/section', 'fullslider'); ?>
 
+                <?php elseif ( get_row_layout() == 'partner_grid' ) : ?>
+
+                    <?php get_template_part('sections/section', 'partner'); ?>
+
                 <?php endif; ?>
 
             <?php endwhile; ?>
