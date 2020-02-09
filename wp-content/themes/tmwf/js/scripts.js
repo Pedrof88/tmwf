@@ -47,7 +47,19 @@
 			items: 1,
 			dots: false,
 			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
-        });
+		});
+		
+		$('.wpcf7-exclusive-checkbox .wpcf7-list-item.last').on('click', $('input'), function(){
+
+			$('span.wpcf7-form-control-wrap.other').css('display', 'block');
+
+		});
+
+		$('.wpcf7-exclusive-checkbox .wpcf7-list-item:not(.last)').on('click', $('input'), function(){
+
+			$('span.wpcf7-form-control-wrap.other').css('display', 'none');
+
+		});
 		
 	});
 	

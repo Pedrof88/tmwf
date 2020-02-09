@@ -1,0 +1,168 @@
+.events-section {
+    position: relative;
+    margin-top: 6rem;
+    padding-left: 5%;
+    padding-right: 5%;
+
+    @include respond(tab-port) {
+        //background-color: $color-primary;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    
+    .container-large {
+        display: flex;
+        align-items: flex-end;
+        background: rgb(198,19,47);
+        background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
+
+        @include respond(tab-land) {
+            background: linear-gradient(0deg, rgba(198,19,47,1) 90%, rgba(255,255,255,1) 90%);
+        }
+
+        @include respond(tab-port) {
+            background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
+            width: 100%;
+            display: block;
+        }
+    }
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 85%;
+        height: 100%;
+        background: rgb(198,19,47);
+        background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
+        z-index: -1;
+
+        @include respond(tab-land) {
+            background: linear-gradient(0deg, rgba(198,19,47,1) 90%, rgba(255,255,255,1) 90%);
+        }
+
+        @include respond(tab-port) {
+            background: linear-gradient(0deg, rgba(198,19,47,1) 80%, rgba(255,255,255,1) 80%);
+            width: 100%;
+            // display: none;
+        }
+    }
+
+    .event-container {
+        width: 90%;
+        padding-bottom: 7rem;
+
+        @include respond(custom-desktop) {
+            padding-bottom: 4rem;
+        }
+
+        @include respond(tab-land) {
+            padding-bottom: 0rem;
+        }
+
+        @include respond(tab-port) {
+            width: 100%;
+            padding: 0 2rem;
+        }
+
+        h2 {
+            color: $white;
+            font-size: 2rem !important;
+            margin: 0;
+        }
+
+        h3 {
+            margin: 0 0 .5rem 0;
+            color: $white;
+            font-size: 4.4rem;
+        }
+
+        p {
+            color: $white;
+            margin: 0;
+            margin-bottom: 2.5rem;
+        }
+
+        a {
+            color: $white;
+        }
+    }
+
+    .event-slider {
+        width: 100%;
+        padding-bottom: 3rem;
+
+        .owl-item {
+            height: 100%;
+        }
+
+        .owl-stage {
+            align-items: flex-end;
+            display: flex;
+
+            
+        }
+
+        .item {
+            padding: 0 4rem;
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+
+            .col-1, .col-5 {
+                @include respond(tab-port) {
+                    width: 100%;
+                }
+            }
+
+            @include respond(tab-port) {
+                display: flex;
+                padding: 0;
+                flex-direction: column-reverse;
+                align-items: flex-start;
+            }
+    
+            .image-container {
+                height: 100%;
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100% !important;
+                object-fit: cover;
+                object-position: center;
+
+                @include respond(tab-port) {
+                    max-height: 550px;
+                }
+            }
+        }
+
+        .owl-next {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 8.5%;
+            outline: none;
+
+            @include respond(tab-port) {
+                right: -2rem;
+            }
+        }
+
+        .owl-prev {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 50%;
+            outline: none;
+
+            @include respond(tab-port) {
+                left: -2rem;
+            }
+        }
+    }
+}

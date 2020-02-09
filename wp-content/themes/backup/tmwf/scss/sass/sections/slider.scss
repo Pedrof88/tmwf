@@ -1,0 +1,138 @@
+.slider {
+    .item {
+        img {
+            max-height: 225px;
+            object-fit: cover;
+        }
+    }
+    &.slider-full-width {
+            .slider__container {
+                margin-right: 0;
+
+                .last {
+                    opacity: 1;
+                }
+
+                .item {
+                    &.odd {
+                        margin-top: 6rem;
+                        @include respond(phone) {
+                            margin-top: 0;
+                        }
+                    }
+                }
+            }
+    }
+    position: relative;
+    padding-top: 6rem;
+    padding-bottom: 6rem;
+    padding-right: 0;
+    padding-left: 0;
+    
+    @include respond(tab-port) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+
+    &__top-content {
+        p {
+            max-width: 400px;
+            margin-top: 0;
+        }
+        h2 {
+            margin-bottom: 0;
+        }
+    }
+    &__container {
+        margin-top: 2rem;
+        max-width: 1560px;
+        float: right;
+        margin-right: -200px;
+        @media (min-width: 1500px) {
+            margin-right: -350px;
+        }
+        transition: all .3s;
+        @include respond(phone) {
+            width: 85% !important;
+            margin-right: 0;
+        }
+
+        .last {
+            opacity: 0.2;
+            @include respond(phone) {
+                opacity: 1;
+            }
+        }
+
+        .owl-prev {
+            position: absolute;
+            left: -100px;
+            top: 40%;
+            @include respond(phone) {
+                left: -65px;
+            }
+            &:hover {
+                background: transparent !important;
+                img {
+                    opacity: 0.7;
+                }
+            }
+            outline: none;
+        }
+
+        .owl-next {
+            position: absolute;
+            right: 0;
+            top: 40%;
+            &:hover {
+                background: transparent !important;
+                img {
+                    opacity: 0.7;
+                }
+            }
+            outline: none;
+            @media (max-width: 1750px) {
+                right: 17%;
+            }
+            @media (max-width: 1670px) {
+                right: 20%;
+            }
+            @media (max-width: 1585px) {
+                right: 21%;
+            }
+            @media (max-width: 1549px) {
+                right: 18%;
+            }
+            @media (max-width: 1090px) {
+                right: 20%;
+            }
+            @media (max-width: 975px) {
+                right: 22%;
+            }
+            @media (max-width: 890px) {
+                right: 27%;
+            }
+            @media (max-width: 790px) {
+                right: 29%;
+            }
+            @media (max-width: 678px) {
+                display: none !important;
+            }
+        }
+
+        h3 {
+            margin-top: 1.5rem;
+            color: $footer-color;
+        }
+    }
+}
+
+.slider-row {
+    padding-right: 5%;
+    padding-left: 5%;
+    
+    @include respond(tab-port) {
+        padding-right: 15px;
+        padding-left: 15px;
+    }
+}

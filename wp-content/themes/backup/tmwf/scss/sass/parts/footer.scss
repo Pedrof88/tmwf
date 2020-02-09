@@ -1,0 +1,86 @@
+.footer {
+    margin-top: 6rem;
+    padding: 3rem 0;
+    float: left;
+    width: 100%;
+    background-color: $footer-color;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .logo-img {
+        margin-top: 30px;
+    }
+    &__block {
+        @include respond(phone) {
+            img {
+                margin: auto;
+                display: block;
+            }
+        }
+        ul {
+            padding-left: 0;
+            list-style: none;
+            li {
+                position: relative;
+                color: $white;
+                line-height: 2;
+                @include respond(phone) {
+                    text-align: center;
+                }
+                &:first-of-type {
+                    font-weight: bold;
+                    a {
+                        font-weight: bold;
+                    }
+                }
+                a {
+                    
+                    &::before {
+                        visibility: hidden;
+                        position: absolute;
+                        content: "";
+                        width: 0%;
+                        background-color: $white;
+                        height: 2px;
+                        bottom: 0;
+                        transition: all .3s;
+                    }
+                    &:hover,&:active {
+                        &::before {
+                            visibility: visible;
+                            width: 100px;
+                        }
+                    }
+                    color: $white;
+                    line-height: 2;
+                }
+            }
+        }
+    }
+
+    .socials {
+        @include respond(phone) {
+            width: 300px;
+            margin: auto;
+            display: flex;
+            justify-content: center;
+        }
+        img {
+            margin-right: 10px;
+            @include respond(phone) {
+                display: inline;
+            }
+        }
+    }
+
+    .copyright {
+        color: $white;
+        text-align: center;
+        width: 100%;
+        margin-left: 15px;
+        margin-right: 15px;
+        p {
+            line-height: 1.3;
+        }
+    }
+}

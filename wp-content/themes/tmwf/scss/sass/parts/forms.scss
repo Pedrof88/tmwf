@@ -16,6 +16,11 @@ padding-bottom: 6rem;
 }
 .wpcf7-form {
     padding-bottom: 6rem;
+
+    .wpcf7-form-control-wrap.other {
+        display: none;
+    }
+
     .submit-button.arrow-link {
         position: relative;
         max-width: 300px !important;

@@ -1,11 +1,16 @@
 .slider {
     .item {
         img {
-            max-height: 275px;
             object-fit: cover;
         }
     }
     &.slider-full-width {
+        padding-left: 8rem;
+        padding-right: 8rem;
+        .col-12 {
+            padding-left: 0;
+            padding-right: 0;
+        }
             .slider__container {
                 margin-right: 0;
 

@@ -6,7 +6,7 @@
                 <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />    
             </div>
         </div>
-        <div class="col-5">
+        <div class="col-6">
             <div class="content-wrapper">
                 <?php the_sub_field( 'content' ); ?>
                 <?php if(get_sub_field( 'button_url' )): ?>
@@ -14,6 +14,5 @@
                 <?php endif; ?>
             </div>
         </div>
-        <div class="col-1"></div>
     </div>
 </section>

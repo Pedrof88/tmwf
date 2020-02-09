@@ -1,0 +1,30 @@
+@import 'utilities/mixins';
+@import 'utilities/variables';
+@import 'utilities/grid';
+@import 'utilities/general';
+@import 'utilities/animations';
+@import 'utilities/buttons';
+@import 'base';
+
+//PARTS
+@import 'parts/header';
+@import 'parts/footer';
+@import 'parts/content';
+@import 'parts/forms';
+
+//SECTIONS
+
+@import 'sections/slider';
+@import 'sections/logos';
+@import 'sections/hero';
+@import 'sections/full-width-button';
+@import 'sections/sign-up';
+@import 'sections/events';
+@import 'sections/leaderboard';
+@import 'sections/fullslider';
+
+//TEMPLATES
+
+@import 'templates/contact-us';
+@import 'templates/gallery';
+@import 'templates/news';

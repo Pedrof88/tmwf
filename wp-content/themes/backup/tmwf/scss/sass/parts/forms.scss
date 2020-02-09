@@ -1,0 +1,143 @@
+.form {
+padding-bottom: 6rem;
+.container-large {
+    padding-left: 6rem;
+    padding-right: 6rem;
+    @include respond(tab-port) {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    @include respond(phone) {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+}
+}
+.wpcf7-form {
+    padding-bottom: 6rem;
+    .submit-button.arrow-link {
+        position: relative;
+        max-width: 300px !important;
+        margin: auto;
+        text-align: center;
+        margin-top: 3rem;
+    }
+    .arrow-link {
+        &:after {
+            margin-left: -10px;
+            top:3px;
+        }
+    }
+    .wpcf7-submit{
+        color: $color-primary;
+        font-weight: bold;
+        transition: all 0.5s cubic-bezier(0.645, 0.045, 0.355, 1);
+        font-size: 1.6rem;
+        text-align: center;
+        -webkit-appearance: none;
+        background: none;
+        border: none;
+    }
+    .col-6, .col-12, .col-2, .col-4, .col-5, .col-8 {
+        padding: 15px !important;
+        input, textarea {
+            transition: all .3s;
+            font-size: 1.6rem;
+            padding: 2rem;
+            border: none;
+            border-bottom: 2px solid $light-grey;
+            color: $light-grey;
+            width: 100%;
+            &:active, &:focus {
+                color: $black;
+                border-bottom: 2px solid $color-primary;
+            }
+        }
+        textarea {
+            outline-color: $color-primary;
+        }
+    }
+
+    ::-webkit-input-placeholder { /* Edge */
+        color: $light-grey;
+      }
+      
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color: $light-grey;
+      }
+      
+      ::placeholder {
+        color: $light-grey;
+      }
+}
+
+.application-form {
+
+span.wpcf7-list-item {
+    display: block;
+    font-size: 1.6rem;
+    font-family: $font;
+    margin-bottom: 2rem;
+    width: 50%;
+    @include respond(phone) {
+        width: 100%;
+    }
+    margin-left: 0;
+
+    input[type="checkbox"] {
+        float: right;
+        border: 1px solid $color-primary;
+        height: 15px;
+        width: 15px;
+        -webkit-appearance: none;
+        &:active, &:focus {
+            background: $color-primary;
+        }
+    }
+}
+
+.other {
+    padding-top: 0;
+    padding-left: 0;
+}
+
+.margin {
+    margin-top: 3rem;
+}
+
+.left {
+    padding-left: 0;
+    @include respond(phone) {
+        padding-right: 0;
+    }
+}
+
+.right {
+    padding-right: 0;
+    @include respond(phone) {
+        padding-left: 0;
+    }
+}
+
+.submit-margin {
+    margin-bottom: 6rem;
+    input {
+        font-size: 2rem;
+    }
+}
+
+    margin-top: 3rem;
+}
+
+.how-to-book {
+    p {
+        margin-bottom: 30px;
+    }
+    span.wpcf7-list-item {
+        float: left;
+    }
+    input[type="checkbox"] { 
+        margin-right: 20px;
+    }
+}

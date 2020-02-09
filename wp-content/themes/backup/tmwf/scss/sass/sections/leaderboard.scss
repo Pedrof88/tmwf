@@ -1,0 +1,36 @@
+.leaderboard {
+    margin-top: 6rem;
+    margin-bottom: 10rem;
+    &__title {
+        color: $color-primary;
+        font-weight: bold;
+        p {
+            font-size: 1.9rem;    
+        }
+    }
+    .grey-border {
+        border-bottom: 1px solid $light-grey;
+    }
+    .col-3 {
+        padding: 0;
+    }
+}
+
+.desktop-view {
+    display: block;
+    @include respond(tab-port) {
+        display: none;
+    }
+}
+
+.mobile-view {
+    display: none;
+    @include respond(tab-port) {
+        display: block;
+    }
+    .col-3 {
+        @include respond(tab-port) {
+            width: 50%;
+        }
+    }
+} 

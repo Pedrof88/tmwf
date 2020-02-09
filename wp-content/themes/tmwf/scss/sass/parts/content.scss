@@ -35,12 +35,25 @@
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
-        // padding: 0 5%;
+        padding: 0 8rem;
+
+        @include respond(phone) {
+            padding: 0 4rem;
+        }
 
         .col-6 {
+            padding: 0;
             @include respond(tab-port) {
                 width: 100%;
             }
+
+            // &:nth-child(1) {
+            //     padding-right: 3rem;
+            // }
+
+            // &:nth-child(2) {
+            //     padding-left: 3rem;
+            // }
         }
         
         .col-5 {
@@ -70,7 +83,7 @@
         flex-direction: column;
         justify-content: center;
         //align-items: center;
-        padding: 0 2.5rem;
+        // padding: 0 2.5rem;
 
         @include respond(tab-port) {
             width: 100%;
@@ -135,19 +148,31 @@
     &.left {
 
         .col-6 {
+            display: flex;
             padding-right: 5%;
+
+            @include respond(phone) {
+                padding-right: 0;
+            }
         }
     }
 
     &.right {
 
         .col-6 {
+            display: flex;
             padding-left: 5%;
+
+            @include respond(phone) {
+                padding-left: 0;
+            }
         }
     }
 
     .image-wrapper {
         position: relative;
+        height: 100%;
+        width: 100%;
 
         &:before {
             content: "";
@@ -209,14 +234,14 @@
 
     .video-wrapper {
         position: absolute;
-        left: -25%;
-        width: 125%;
+        left: -40%;
+        width: 140%;
         height: 100%;
         padding-right: 5%;
 
         @media screen and (max-width: 1440px) {
-            left: -10%;
-            width: 110%;
+            left: -15%;
+            width: 115%;
         }
 
         @include respond(tab-port) {
