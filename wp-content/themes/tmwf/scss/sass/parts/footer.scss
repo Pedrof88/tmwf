@@ -7,6 +7,10 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
+
+    .wrapper {
+        max-width: 1570px;
+    }
     .logo-img {
         margin-top: 30px;
     }
@@ -82,5 +86,8 @@
         p {
             line-height: 1.3;
         }
+    }
+    strong {
+        color: $white;
     }
 }

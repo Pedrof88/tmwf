@@ -36,7 +36,7 @@
 					<div class="copyright">
 						<p>The Malcolm Whales Foundation is a charity registered in England and Wales (No. 1146719)</p>
 						<p>Copyright © 2019 The Malcom Whales Foundation</p>
-						<p>Website designed by <strong>Elliot Littlefield</strong></p>
+						<p>Website designed by <a href="http://elliotlittlefield.co.uk/" target="_blank"><strong>Elliot Littlefield</strong></a></p>
 					</div>
 					<!-- /copyright -->
 			</footer>

@@ -96,7 +96,7 @@ span.wpcf7-list-item {
         height: 15px;
         width: 15px;
         -webkit-appearance: none;
-        &:active, &:focus {
+        &:checked {
             background: $color-primary;
         }
     }

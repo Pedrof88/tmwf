@@ -7,6 +7,21 @@
         }
     }
 
+    
+    .left {
+        padding-right: 1.5rem !important;
+        @include respond(tab-port) {
+            padding-left: 0 !important;
+        }
+    }
+
+    .right {
+        padding-left: 1.5rem !important;
+        @include respond(tab-port) {
+            padding-left: 0 !important;
+        }
+    }
+
     &.right {
         .container-large {
             flex-direction: row-reverse;
