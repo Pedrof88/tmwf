@@ -19,7 +19,7 @@
 			autoplay:true,
 			autoplayTimeout:10000,
 			autoplayHoverPause:true,
-			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
+			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right.png'>"],
 			responsive:{
 				0:{
 					items:1

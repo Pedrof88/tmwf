@@ -221,6 +221,13 @@ ul li {
 .page-id-12 .slider__top-content p {
   max-width: 100%; }
 
+.flex-partners {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
 .btn-red, .menu-item-101 {
   background-color: #c6132f;
   padding: 1rem 3rem;
@@ -605,6 +612,7 @@ h2 {
         .footer__block ul li:first-of-type a {
           font-weight: bold; }
       .footer__block ul li a {
+        font-size: 1.4rem;
         color: #FFF;
         line-height: 2; }
         .footer__block ul li a::before {
@@ -621,6 +629,19 @@ h2 {
         .footer__block ul li a:hover::before, .footer__block ul li a:active::before {
           visibility: visible;
           width: 100px; }
+  @media only screen and (max-width: 37.5em) {
+    .footer__block.second, .footer__block.third {
+      display: none; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__block.first ul {
+      padding-bottom: 0;
+      margin-bottom: 0; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__block.first, .footer__block.forth {
+      padding-top: 0; }
+      .footer__block.first ul, .footer__block.forth ul {
+        padding-top: 0;
+        margin-top: 0; } }
   @media only screen and (max-width: 37.5em) {
     .footer .socials {
       width: 300px;
@@ -1381,6 +1402,10 @@ form p.margin-top {
     display: block; }
     .full-width-button a:after {
       top: -5px; }
+
+.row.fullwidth {
+  z-index: 99;
+  position: relative; }
 
 .sign-up {
   margin-top: 3rem;

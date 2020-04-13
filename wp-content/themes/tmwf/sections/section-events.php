@@ -1,4 +1,4 @@
-<section class="events-section">
+<section class="events-section row">
     <div class="owl-carousel event-slider container-large">
 
         <?php if ( have_rows( 'event' ) ) : ?>

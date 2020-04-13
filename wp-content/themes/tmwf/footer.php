@@ -9,16 +9,16 @@
 					<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="Logo" class="logo-img">
 				</div>
 
-				<div class="footer__block col-custom">
+				<div class="footer__block col-custom first">
 					<?php aboutus_nav(); ?>
 				</div>
-				<div class="footer__block col-custom">
+				<div class="footer__block col-custom second">
 					<?php events_nav(); ?>
 				</div>
-				<div class="footer__block col-custom">
+				<div class="footer__block col-custom third">
 					<?php get_involved_menu();?>
 				</div>
-				<div class="footer__block col-custom">
+				<div class="footer__block col-custom forth">
 					<ul>
 						<li>Contact us</li>
 						<li><a href="mailto:<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a></li>
