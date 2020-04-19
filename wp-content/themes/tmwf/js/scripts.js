@@ -38,7 +38,7 @@
 			nav:true,
 			items: 1,
 			dots: false,
-			navText: ["<img src='wp-content/themes/tmwf/img/icons/slider-nav-left-white.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right-white.png'>"],
+			navText: ["<img src='/wp-content/themes/tmwf/img/icons/slider-nav-left-white.png'>","<img src='/wp-content/themes/tmwf/img/icons/slide-nav-right-white.png'>"],
 		});
 		
 		$('.fullslider-slider').owlCarousel({

@@ -2124,6 +2124,7 @@ form p.margin-top {
   margin-top: 6rem;
   padding-left: 5%;
   padding-right: 5%;
+  margin-bottom: 6rem;
 }
 @media only screen and (max-width: 56.35em) {
   .events-section {
