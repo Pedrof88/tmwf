@@ -60,7 +60,45 @@
 			$('span.wpcf7-form-control-wrap.other').css('display', 'none');
 
 		});
+
+		$('.shadow .search').on('click', function(){
+			$('.search-wrapper').toggleClass('active');
+		});
+
+		$('.search-header .close a').on('click', function(){
+			$('.search-wrapper').toggleClass('active');
+		});
 		
+		var timeout = null;
+		$('#search-input').on('keyup', function () {
+
+			var searchInput = $(this).val();
+			clearTimeout(timeout);
+			var counter = 0;
+			
+			timeout = setTimeout(function(){
+				if (searchInput) {
+					$('.search-results ul').children().fadeOut(500, function () {
+						$('.search-results ul').empty();
+					});
+					$.getJSON('http://tmwf.lo/wp-json/wp/v2/posts?search=' + searchInput, function (result) {
+						console.log(result);
+						if (result.length) {
+							$.each(result, function (i, field) {
+								console.log(field);
+								var response = '<li><a href="'+field.guid.rendered+'"><h5>'+field.title.rendered+'</h5><p>'+field.content.rendered.replace(/(<([^>]+)>)/ig, "").substr(0, 175)+'...</p></a></li>';
+								// var response = '<li><a href="' + field.guid.rendered + '"><h5 class="orange">' + field.title.rendered + ' - Blog</h5><p>' + field.content.rendered.replace(/(<([^>]+)>)/ig, "").substr(0, 175) + '...</p></a></li>';​
+								$('.search-results ul').append(response).hide().fadeIn(500);
+							});
+						} else {
+							console.log('no response');
+							++counter;
+						}
+					});
+				}
+			}, 500);
+		});
+
 	});
 	
 })(jQuery, this);

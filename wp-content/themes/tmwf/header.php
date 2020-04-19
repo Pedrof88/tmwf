@@ -25,8 +25,40 @@
 	</head>
 	<body <?php body_class(); ?>>
 
+		<!-- search -->
+		<div class="search-wrapper">
+		  <div class="search-header">
+		  		<div class="wrapper">
+				  	<div class="logo col-4">
+						<a href="<?php echo home_url(); ?>">
+							<img src="<?php echo get_template_directory_uri(); ?>/img/logo-white.png" alt="Logo" class="logo-img">
+						</a>
+					</div>
+					<div class="close col-8">
+		  				<a href="#">Close <i class="fas fa-times"></i></a>
+					</div>
+			  	</div>
+		  </div>
+		  <div class="search-container">
+		  		<div class="search-input">
+		  			<input type="text" id="search-input" placeholder="Type to start search">
+				</div>
+				<div class="search-results">
+		  			<ul>
+					
+					</ul>
+				</div>
+		  </div>
+		</div>
+		<!-- /search -->
+
 		<!-- wrapper -->
 		<div class="shadow">
+
+			<a href="#" class="search">
+				Search <i class="fas fa-search"></i>
+			</a>
+
 			<div class="wrapper">
 
 			<!-- header -->
