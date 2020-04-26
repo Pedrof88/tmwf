@@ -30,7 +30,7 @@ padding-bottom: 6rem;
     }
     .arrow-link {
         &:after {
-            margin-left: -10px;
+            margin-left: 0;
             top:3px;
         }
     }
@@ -151,4 +151,8 @@ form {
     p.margin-top {
         margin-bottom: 6rem;
     }
+}
+
+.center-aligned {
+    text-align: center;
 }

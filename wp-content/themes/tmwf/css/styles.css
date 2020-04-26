@@ -1637,6 +1637,15 @@ header {
   }
 }
 
+@media only screen and (max-width: 37.5em) {
+  .content-wrapper {
+    margin-top: 2rem;
+  }
+  .content-wrapper .arrow-link {
+    margin-bottom: 2rem;
+  }
+}
+
 .form {
   padding-bottom: 6rem;
 }
@@ -1671,7 +1680,7 @@ header {
   margin-top: 3rem;
 }
 .wpcf7-form .arrow-link:after {
-  margin-left: -10px;
+  margin-left: 0;
   top: 3px;
 }
 .wpcf7-form .wpcf7-submit {
@@ -1793,6 +1802,10 @@ header {
 
 form p.margin-top {
   margin-bottom: 6rem;
+}
+
+.center-aligned {
+  text-align: center;
 }
 
 .slider {
