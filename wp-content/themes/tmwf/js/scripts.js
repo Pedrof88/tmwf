@@ -88,7 +88,7 @@
 						$('.search-results ul').empty();
 					});
 
-					$.getJSON('http://tmwf.lo/wp-json/wp/v2/posts?search=' + searchInput, function (result) {
+					$.getJSON('http://phpstack-304241-1065609.cloudwaysapps.com/wp-json/wp/v2/posts?search=' + searchInput, function (result) {
 						console.log(result);
 						if (result.length) {
 							$.each(result, function (i, field) {
@@ -107,7 +107,7 @@
 						}
 					});
 
-					$.getJSON('http://tmwf.lo/wp-json/wp/v2/pages?search=' + searchInput, function (result) {
+					$.getJSON('http://phpstack-304241-1065609.cloudwaysapps.com/wp-json/wp/v2/pages?search=' + searchInput, function (result) {
 						console.log(result);
 						if (result.length) {
 							$.each(result, function (i, field) {
