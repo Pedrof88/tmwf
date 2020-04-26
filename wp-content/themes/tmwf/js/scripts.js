@@ -89,10 +89,10 @@
 					});
 
 					$.getJSON('http://phpstack-304241-1065609.cloudwaysapps.com/wp-json/wp/v2/posts?search=' + searchInput, function (result) {
-						console.log(result);
+						// console.log(result);
 						if (result.length) {
 							$.each(result, function (i, field) {
-								console.log(field);
+								// console.log(field);
 								var response = '<li><a href="'+field.guid.rendered+'"><h5>'+field.title.rendered+'</h5><p>'+field.content.rendered.replace(/(<([^>]+)>)/ig, "").substr(0, 175)+'...</p></a></li>';
 								// var response = '<li><a href="' + field.guid.rendered + '"><h5 class="orange">' + field.title.rendered + ' - Blog</h5><p>' + field.content.rendered.replace(/(<([^>]+)>)/ig, "").substr(0, 175) + '...</p></a></li>';​
 								$('.search-results ul').append(response).hide().fadeIn(500);
@@ -100,7 +100,7 @@
 								$('#search-input').css('opacity', '1');
 							});
 						} else {
-							console.log('no response');
+							// console.log('no response');
 							++counter;
 							$('#search-input').prop('disabled', false);
 							$('#search-input').css('opacity', '1');
@@ -108,10 +108,10 @@
 					});
 
 					$.getJSON('http://phpstack-304241-1065609.cloudwaysapps.com/wp-json/wp/v2/pages?search=' + searchInput, function (result) {
-						console.log(result);
+						// console.log(result);
 						if (result.length) {
 							$.each(result, function (i, field) {
-								console.log(field);
+								// console.log(field);
 								var response = '<li><a href="'+field.guid.rendered+'"><h5>'+field.title.rendered+'</h5></a></li>';
 								// var response = '<li><a href="' + field.guid.rendered + '"><h5 class="orange">' + field.title.rendered + ' - Blog</h5><p>' + field.content.rendered.replace(/(<([^>]+)>)/ig, "").substr(0, 175) + '...</p></a></li>';​
 								$('.search-results ul').append(response).hide().fadeIn(500);
@@ -119,7 +119,7 @@
 								$('#search-input').css('opacity', '1');
 							});
 						} else {
-							console.log('no response');
+							// console.log('no response');
 							++counter;
 							$('#search-input').prop('disabled', false);
 							$('#search-input').css('opacity', '1');
