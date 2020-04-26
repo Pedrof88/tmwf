@@ -2697,11 +2697,11 @@ form p.margin-top {
   -o-object-position: center;
      object-position: center;
 }
-.news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5) {
+.news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5), .news-section .news-container .image-wrapper:nth-child(7), .news-section .news-container .image-wrapper:nth-child(9), .news-section .news-container .image-wrapper:nth-child(11), .news-section .news-container .image-wrapper:nth-child(13), .news-section .news-container .image-wrapper:nth-child(15), .news-section .news-container .image-wrapper:nth-child(17), .news-section .news-container .image-wrapper:nth-child(19), .news-section .news-container .image-wrapper:nth-child(21) {
   margin-top: 6rem;
 }
 @media only screen and (max-width: 56.35em) {
-  .news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5) {
+  .news-section .news-container .image-wrapper:nth-child(3), .news-section .news-container .image-wrapper:nth-child(5), .news-section .news-container .image-wrapper:nth-child(7), .news-section .news-container .image-wrapper:nth-child(9), .news-section .news-container .image-wrapper:nth-child(11), .news-section .news-container .image-wrapper:nth-child(13), .news-section .news-container .image-wrapper:nth-child(15), .news-section .news-container .image-wrapper:nth-child(17), .news-section .news-container .image-wrapper:nth-child(19), .news-section .news-container .image-wrapper:nth-child(21) {
     margin-top: 0;
   }
 }
