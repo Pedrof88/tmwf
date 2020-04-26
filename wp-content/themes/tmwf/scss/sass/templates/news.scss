@@ -18,7 +18,7 @@
                 object-position: center;
             }
 
-            &:nth-child(3), &:nth-child(5) {
+            &:nth-child(3), &:nth-child(5), &:nth-child(7), &:nth-child(9), &:nth-child(11), &:nth-child(13), &:nth-child(15), &:nth-child(17), &:nth-child(19), &:nth-child(21) {
                 margin-top: 6rem;
 
                 @include respond(tab-port) {

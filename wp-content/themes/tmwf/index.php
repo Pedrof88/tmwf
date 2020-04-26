@@ -30,6 +30,7 @@
 					$('.news-container').isotope({
 						itemSelector: '.image-wrapper',
 						percentPosition: true,
+						layoutMode: 'fitRows',
 						masonry: {
 							columnWidth: '.grid-sizer'
 						}
