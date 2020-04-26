@@ -29,6 +29,12 @@ header {
       align-items: center;
       height: 125px;
 
+      @include respond(tab-land) {
+        position: absolute;
+        top: 0;
+        right: 0;
+      }
+
       a {
         color: #fff;
         display: flex;
@@ -65,6 +71,10 @@ header {
         border-bottom: 3px solid #fff;
         padding: 1.5rem 0;
 
+        @include respond(tab-land) {
+          font-size: 2.8rem;
+        }
+
         &::placeholder {
           color: rgba(255,255,255,0.7);
         }
@@ -79,6 +89,10 @@ header {
       margin-top: 3rem;
       -ms-overflow-style: none !important;
 
+      @include respond(tab-land) {
+        width: 95%;
+      }
+
       &::-webkit-scrollbar {
         display: none !important;
       }
@@ -86,6 +100,7 @@ header {
       ul {
         list-style-type: none;
         text-align: center;
+        padding: 0;
         
         li {
           margin-bottom: 2rem;
@@ -102,6 +117,10 @@ header {
             h5 {
               color: $white;
               margin: 0;
+
+              @include respond(tab-land) {
+                font-size: 2.4rem;
+              }
             }
 
             p {
@@ -109,6 +128,10 @@ header {
               color: $white;
               margin: 0;
               margin: 0 auto;
+
+              @include respond(tab-land) {
+                width: 95%;
+              }
             }
           }
         }
@@ -132,6 +155,15 @@ header {
   color: $white;
   font-weight: 500;
   font-size: 1.6rem;
+
+  @include respond(tab-land) {
+    background-color: transparent;
+    width: auto;
+    padding: 0 1rem;
+    right: 70px;
+    color: $color-primary;
+    z-index: 999991;
+  }
 
   i {
     font-size: 2.8rem;
@@ -316,7 +348,7 @@ header {
 //mobile navigation
 .button_container {
   position: fixed;
-  top: 5%;
+  top: 6%;
   right: 2%;
   height: 27px;
   width: 35px;
@@ -450,6 +482,10 @@ header {
       &:hover {
         background-color: transparent !important;
       }
+    }
+
+    .sub-menu {
+      display: none;
     }
 
     li {
