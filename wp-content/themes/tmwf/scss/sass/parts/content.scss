@@ -399,6 +399,7 @@
 }
 
 .modal {
+    position: relative;
     opacity: 0;
     visibility: hidden;
     position: fixed;
@@ -416,6 +417,18 @@
     &.active {
         opacity: 1;
         visibility: visible;
+    }
+
+    .close {
+        position: absolute;
+        top: 2rem;
+        right: 4rem;
+        cursor: pointer;
+        transition: all .25s ease;
+
+        &:hover {
+            opacity: 0.8;
+        }
     }
 
     &__container {

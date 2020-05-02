@@ -1067,6 +1067,21 @@ header {
   -webkit-box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
           box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.08);
 }
+@media screen and (max-width: 1800px) {
+  .shadow .wrapper {
+    margin-right: 200px !important;
+  }
+}
+@media screen and (max-width: 1600px) {
+  .shadow .wrapper {
+    max-width: 1200px !important;
+  }
+}
+@media screen and (max-width: 1400px) {
+  .shadow .wrapper {
+    max-width: 1000px !important;
+  }
+}
 
 .footer {
   margin-top: 6rem;
@@ -1146,6 +1161,9 @@ header {
   .footer__block.first ul {
     padding-bottom: 0;
     margin-bottom: 0;
+  }
+  .footer__block.first ul li:nth-child(1), .footer__block.first ul li:nth-child(2), .footer__block.first ul li:nth-child(3), .footer__block.first ul li:nth-child(4) {
+    display: none;
   }
 }
 @media only screen and (max-width: 37.5em) {
@@ -1592,6 +1610,7 @@ header {
 }
 
 .modal {
+  position: relative;
   opacity: 0;
   visibility: hidden;
   position: fixed;
@@ -1617,6 +1636,18 @@ header {
 .modal.active {
   opacity: 1;
   visibility: visible;
+}
+.modal .close {
+  position: absolute;
+  top: 2rem;
+  right: 4rem;
+  cursor: pointer;
+  -webkit-transition: all 0.25s ease;
+  -o-transition: all 0.25s ease;
+  transition: all 0.25s ease;
+}
+.modal .close:hover {
+  opacity: 0.8;
 }
 .modal__container {
   width: 90%;
