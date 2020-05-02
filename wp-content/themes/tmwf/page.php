@@ -8,7 +8,7 @@
         <section class="form">
         <div class="container-large">
             <div class="col-12">
-                <h2 class="center-aligned">Submit your walks data</h2>
+                <h2 class="center-aligned">Submit your miles</h2>
             </div>
             <?php echo do_shortcode('[contact-form-7 id="1055" title="Leaderboard Form"]');?>
         </div>
