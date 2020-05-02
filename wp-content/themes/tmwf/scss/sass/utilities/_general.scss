@@ -77,3 +77,43 @@ ul {
     display: flex;
     flex-wrap: wrap;
 }
+
+div.wpcf7-mail-sent-ok {
+    border: none;
+    text-align: center;
+}
+
+.wpcf7-form .wpcf7-submit {
+    margin-bottom: 3rem;
+}
+
+.years-walked {
+font-size: 1.6rem;
+padding: 2rem;
+border: none;
+border-bottom: 2px solid $color-primary;
+color: $black;
+width: 50%;
+display: block;
+}
+
+.full-width-column-years {
+    display: block;
+    .wpcf7-checkbox {
+        .wpcf7-list-item {
+            max-width: 180px;
+            width: 100%;
+            display: block;
+            .wpcf7-list-item-label {
+                font-size: 1.5rem;
+                margin-top: -21px;
+                display: block;
+                padding-bottom: 1rem;
+                max-width: 110px;
+            }
+            &.first {
+                margin-top: 3rem;
+            }
+        }
+    }
+}

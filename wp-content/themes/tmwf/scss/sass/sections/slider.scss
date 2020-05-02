@@ -71,8 +71,9 @@
 
         .owl-prev {
             position: absolute;
-            left: -100px;
+            left: -63px;
             top: 40%;
+            
             @include respond(phone) {
                 left: -65px;
             }
@@ -87,7 +88,6 @@
 
         .owl-next {
             position: absolute;
-            right: 0;
             top: 40%;
             &:hover {
                 background: transparent !important;
@@ -96,30 +96,7 @@
                 }
             }
             outline: none;
-            @media (max-width: 1750px) {
-                right: 17%;
-            }
-            @media (max-width: 1670px) {
-                right: 20%;
-            }
-            @media (max-width: 1585px) {
-                right: 21%;
-            }
-            @media (max-width: 1549px) {
-                right: 18%;
-            }
-            @media (max-width: 1090px) {
-                right: 20%;
-            }
-            @media (max-width: 975px) {
-                right: 22%;
-            }
-            @media (max-width: 890px) {
-                right: 27%;
-            }
-            @media (max-width: 790px) {
-                right: 29%;
-            }
+                right: -5%;
             @media (max-width: 678px) {
                 display: none !important;
             }

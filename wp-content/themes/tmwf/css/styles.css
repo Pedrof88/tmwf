@@ -228,6 +228,37 @@ ul li {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+div.wpcf7-mail-sent-ok {
+  border: none;
+  text-align: center; }
+
+.wpcf7-form .wpcf7-submit {
+  margin-bottom: 3rem; }
+
+.years-walked {
+  font-size: 1.6rem;
+  padding: 2rem;
+  border: none;
+  border-bottom: 2px solid #c6132f;
+  color: #000;
+  width: 50%;
+  display: block; }
+
+.full-width-column-years {
+  display: block; }
+  .full-width-column-years .wpcf7-checkbox .wpcf7-list-item {
+    max-width: 180px;
+    width: 100%;
+    display: block; }
+    .full-width-column-years .wpcf7-checkbox .wpcf7-list-item .wpcf7-list-item-label {
+      font-size: 1.5rem;
+      margin-top: -21px;
+      display: block;
+      padding-bottom: 1rem;
+      max-width: 110px; }
+    .full-width-column-years .wpcf7-checkbox .wpcf7-list-item.first {
+      margin-top: 3rem; }
+
 .btn-red, .menu-item-101 a {
   background-color: #c6132f;
   padding: .5rem 3rem;
@@ -1476,7 +1507,7 @@ form p.margin-top {
           opacity: 1; } }
     .slider__container .owl-prev {
       position: absolute;
-      left: -100px;
+      left: -63px;
       top: 40%;
       outline: none; }
       @media only screen and (max-width: 37.5em) {
@@ -1488,37 +1519,13 @@ form p.margin-top {
           opacity: 0.7; }
     .slider__container .owl-next {
       position: absolute;
-      right: 0;
       top: 40%;
-      outline: none; }
+      outline: none;
+      right: -5%; }
       .slider__container .owl-next:hover {
         background: transparent !important; }
         .slider__container .owl-next:hover img {
           opacity: 0.7; }
-      @media (max-width: 1750px) {
-        .slider__container .owl-next {
-          right: 17%; } }
-      @media (max-width: 1670px) {
-        .slider__container .owl-next {
-          right: 20%; } }
-      @media (max-width: 1585px) {
-        .slider__container .owl-next {
-          right: 21%; } }
-      @media (max-width: 1549px) {
-        .slider__container .owl-next {
-          right: 18%; } }
-      @media (max-width: 1090px) {
-        .slider__container .owl-next {
-          right: 20%; } }
-      @media (max-width: 975px) {
-        .slider__container .owl-next {
-          right: 22%; } }
-      @media (max-width: 890px) {
-        .slider__container .owl-next {
-          right: 27%; } }
-      @media (max-width: 790px) {
-        .slider__container .owl-next {
-          right: 29%; } }
       @media (max-width: 678px) {
         .slider__container .owl-next {
           display: none !important; } }
